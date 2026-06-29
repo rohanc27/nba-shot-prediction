@@ -1,0 +1,101 @@
+GAME_DATE,PLAYER_NAME,TEAM_NAME,HOME_TEAM,AWAY_TEAM,ACTION_TYPE,action_category,SHOT_TYPE,BASIC_ZONE,ZONE_NAME,ZONE_RANGE,SHOT_DISTANCE,LOC_X,LOC_Y,QUARTER,MINS_LEFT,SECS_LEFT,SHOT_MADE,predicted_prob,prediction,absolute_error
+2025-03-29,Anthony Davis,Dallas Mavericks,CHI,DAL,Running Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.7,5.15,4,8,21,0,0.95876193,1,0.9587619304656982
+2025-02-24,Jalen Duren,Detroit Pistons,DET,LAC,Tip Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.1,4.85,4,1,57,0,0.9564762,1,0.9564762115478516
+2024-11-19,Anthony Davis,Los Angeles Lakers,LAL,UTA,Running Alley Oop Layup Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,5.75,2,1,44,0,0.9557279,1,0.9557278752326965
+2025-01-28,Giannis Antetokounmpo,Milwaukee Bucks,POR,MIL,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.7,4.75,3,1,34,0,0.9552561,1,0.9552561044692993
+2025-01-27,Daniel Gafford,Dallas Mavericks,DAL,WAS,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,5.65,1,11,48,0,0.9542803,1,0.9542803168296814
+2024-10-28,Daniel Gafford,Dallas Mavericks,DAL,UTA,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,5.35,1,8,20,0,0.9537626,1,0.9537625908851624
+2024-12-23,Evan Mobley,Cleveland Cavaliers,CLE,UTA,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.6,5.95,3,7,10,0,0.9534464,1,0.9534463882446289
+2024-12-14,Giannis Antetokounmpo,Milwaukee Bucks,MIL,ATL,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,6.05,3,9,34,0,0.9528651,1,0.9528651237487793
+2025-02-20,Wendell Carter Jr.,Orlando Magic,ATL,ORL,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,5.55,2,3,5,0,0.9524019,1,0.952401876449585
+2025-02-06,Jayson Tatum,Boston Celtics,BOS,DAL,Running Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.5,5.95,1,8,5,0,0.9521609,1,0.9521608948707581
+2025-03-17,Jalen Duren,Detroit Pistons,NOP,DET,Running Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.5,5.75,1,5,11,0,0.9517233,1,0.9517232775688171
+2025-01-23,Brook Lopez,Milwaukee Bucks,MIL,MIA,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,5.55,2,5,26,0,0.9504747,1,0.9504746794700623
+2025-02-07,Onyeka Okongwu,Atlanta Hawks,ATL,MIL,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.5,5.65,4,5,34,0,0.95043415,1,0.950434148311615
+2024-11-27,Jonathan Isaac,Orlando Magic,ORL,CHI,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.5,5.15,3,4,41,0,0.950411,1,0.9504110217094421
+2024-12-05,Daniel Gafford,Dallas Mavericks,WAS,DAL,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,0.1,4.15,2,11,25,0,0.9502882,1,0.9502881765365601
+2025-01-03,Scottie Barnes,Toronto Raptors,TOR,ORL,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,5.55,4,7,57,0,0.95005065,1,0.9500506520271301
+2024-11-27,Myles Turner,Indiana Pacers,IND,POR,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,5.65,4,6,5,0,0.9496726,1,0.9496725797653198
+2024-11-27,Evan Mobley,Cleveland Cavaliers,CLE,ATL,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.7,5.75,4,2,31,0,0.94902235,1,0.9490223526954651
+2024-12-08,Aaron Gordon,Denver Nuggets,ATL,DEN,Running Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,6.15,2,4,48,0,0.9487119,1,0.9487118721008301
+2025-04-13,Wendell Carter Jr.,Orlando Magic,ATL,ORL,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.6,5.65,2,2,3,0,0.9482954,1,0.9482954144477844
+2025-01-13,Trayce Jackson-Davis,Golden State Warriors,TOR,GSW,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.5,5.65,1,11,45,0,0.94779944,1,0.9477994441986084
+2024-11-06,Jalen Williams,Oklahoma City Thunder,DEN,OKC,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,5.75,2,9,47,0,0.94713604,1,0.9471360445022583
+2025-02-07,Onyeka Okongwu,Atlanta Hawks,ATL,MIL,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.7,5.75,3,11,30,0,0.9466461,1,0.9466460943222046
+2025-04-11,Aaron Gordon,Denver Nuggets,DEN,MEM,Running Reverse Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.0,6.05,4,6,24,0,0.94657177,1,0.9465717673301697
+2025-02-05,Bradley Beal,Phoenix Suns,OKC,PHX,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.5,5.75,3,5,10,0,0.94652724,1,0.9465272426605225
+2024-11-27,OG Anunoby,New York Knicks,DAL,NYK,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.1,5.55,2,7,29,0,0.94640785,1,0.9464078545570374
+2024-11-01,Larry Nance Jr.,Atlanta Hawks,ATL,SAC,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.2,5.95,1,9,54,0,0.9462474,1,0.946247398853302
+2025-03-22,Karl-Anthony Towns,New York Knicks,NYK,WAS,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.6,4.85,3,5,54,0,0.9462308,1,0.9462308287620544
+2024-11-06,Bam Adebayo,Miami Heat,PHX,MIA,Running Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.2,5.75,2,1,4,0,0.9458827,1,0.9458826780319214
+2024-12-12,Isaac Jones,Sacramento Kings,NOP,SAC,Running Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,5.75,1,1,12,0,0.94581956,1,0.9458195567131042
+2025-01-01,OG Anunoby,New York Knicks,NYK,UTA,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,5.95,3,0,58,0,0.94576925,1,0.9457692503929138
+2024-10-27,Jalen Williams,Oklahoma City Thunder,OKC,ATL,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.5,5.85,2,4,30,0,0.94549644,1,0.9454964399337769
+2025-03-12,Christian Braun,Denver Nuggets,DEN,MIN,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.6,5.75,1,10,9,0,0.94510335,1,0.9451033473014832
+2024-10-25,OG Anunoby,New York Knicks,NYK,IND,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.2,5.65,3,10,49,0,0.9450104,1,0.9450104236602783
+2025-02-22,Miles Bridges,Charlotte Hornets,POR,CHA,Running Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.7,4.85,1,9,25,0,0.9449475,1,0.9449474811553955
+2025-01-23,Giannis Antetokounmpo,Milwaukee Bucks,MIL,MIA,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,-0.0,6.25,3,4,33,0,0.9443103,1,0.9443103075027466
+2025-03-16,Jaxson Hayes,Los Angeles Lakers,LAL,PHX,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.5,6.05,1,10,15,0,0.94422686,1,0.944226861000061
+2024-10-27,Jalen Johnson,Atlanta Hawks,OKC,ATL,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,5.75,2,11,14,0,0.944202,1,0.9442020058631897
+2025-04-03,Bam Adebayo,Miami Heat,MIA,MEM,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.2,5.35,2,11,18,0,0.9441712,1,0.9441711902618408
+2025-02-21,Devin Vassell,San Antonio Spurs,SAS,DET,Running Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.5,5.55,4,9,47,0,0.943311,1,0.9433109760284424
+2024-12-12,Bam Adebayo,Miami Heat,MIA,TOR,Running Alley Oop Layup Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,5.75,4,6,16,0,0.9432363,1,0.9432362914085388
+2025-01-15,Giannis Antetokounmpo,Milwaukee Bucks,MIL,ORL,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,0.2,6.55,1,5,20,0,0.9430378,1,0.9430378079414368
+2024-11-21,Zach Collins,San Antonio Spurs,SAS,UTA,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,5.85,1,2,19,0,0.94301313,1,0.9430131316184998
+2025-01-12,OG Anunoby,New York Knicks,NYK,MIL,Running Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.5,5.25,2,2,43,0,0.94285107,1,0.9428510665893555
+2024-11-01,Clint Capela,Atlanta Hawks,ATL,SAC,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.2,5.95,1,7,46,0,0.9426546,1,0.9426546096801758
+2024-12-25,OG Anunoby,New York Knicks,NYK,SAS,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.2,6.05,1,5,43,0,0.9425375,1,0.9425374865531921
+2024-10-28,Jalen Johnson,Atlanta Hawks,ATL,WAS,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.2,5.95,2,11,53,0,0.94252807,1,0.9425280690193176
+2024-12-03,Jonathan Kuminga,Golden State Warriors,DEN,GSW,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.7,5.35,4,1,53,0,0.9421168,1,0.9421167969703674
+2024-12-19,Jalen Williams,Oklahoma City Thunder,ORL,OKC,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,5.25,3,6,27,0,0.94210124,1,0.942101240158081
+2024-11-19,DeAndre Jordan,Denver Nuggets,MEM,DEN,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.2,6.05,3,4,49,0,0.942053,1,0.9420530200004578
+2025-01-20,Trey Murphy III,New Orleans Pelicans,NOP,UTA,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.1,5.35,1,2,13,0,0.9419889,1,0.9419888854026794
+2025-03-08,Nic Claxton,Brooklyn Nets,CHA,BKN,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.2,5.85,1,11,9,0,0.94197047,1,0.9419704675674438
+2025-03-09,Zach Edey,Memphis Grizzlies,NOP,MEM,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,5.95,2,8,50,0,0.94192934,1,0.9419293403625488
+2024-11-29,Goga Bitadze,Orlando Magic,BKN,ORL,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.6,5.35,3,8,5,0,0.94171333,1,0.9417133331298828
+2025-01-12,Kristaps Porziņģis,Boston Celtics,BOS,NOP,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.1,6.05,4,7,48,0,0.94164187,1,0.9416418671607971
+2024-11-15,Bam Adebayo,Miami Heat,IND,MIA,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,6.05,1,0,44,0,0.9416016,1,0.941601574420929
+2024-11-17,Clint Capela,Atlanta Hawks,POR,ATL,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.5,5.55,2,1,28,0,0.94134766,1,0.9413476586341858
+2024-11-06,Bam Adebayo,Miami Heat,PHX,MIA,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.2,6.05,3,2,30,0,0.94127923,1,0.9412792325019836
+2024-12-13,Nick Richards,Charlotte Hornets,CHI,CHA,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,6.15,3,1,35,0,0.94123775,1,0.94123774766922
+2025-01-25,Larry Nance Jr.,Atlanta Hawks,ATL,TOR,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,0.2,4.15,2,3,55,0,0.94087625,1,0.9408762454986572
+2025-01-15,Julius Randle,Minnesota Timberwolves,MIN,GSW,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,6.15,4,10,31,0,0.94081527,1,0.940815269947052
+2025-02-23,Devin Vassell,San Antonio Spurs,NOP,SAS,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.6,5.75,3,9,0,0,0.9405064,1,0.9405063986778259
+2025-02-01,Nic Claxton,Brooklyn Nets,HOU,BKN,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,5.65,3,8,57,0,0.9400546,1,0.9400545954704285
+2024-11-30,Clint Capela,Atlanta Hawks,CHA,ATL,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.1,6.05,2,5,9,0,0.9398787,1,0.9398787021636963
+2025-03-10,Jay Huff,Memphis Grizzlies,MEM,PHX,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,5.65,1,9,20,0,0.93983644,1,0.9398364424705505
+2025-02-08,Anthony Davis,Dallas Mavericks,DAL,HOU,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,0.1,6.65,2,3,41,0,0.939523,1,0.9395229816436768
+2024-12-06,Andre Drummond,Philadelphia 76ers,PHI,ORL,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,5.05,1,3,52,0,0.9393556,1,0.9393556118011475
+2025-03-30,Trayce Jackson-Davis,Golden State Warriors,SAS,GSW,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.7,5.75,4,7,7,0,0.93852746,1,0.9385274648666382
+2025-01-21,Nic Claxton,Brooklyn Nets,BKN,NYK,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,5.35,4,11,40,0,0.9384103,1,0.9384102821350098
+2025-01-11,Jaren Jackson Jr.,Memphis Grizzlies,MIN,MEM,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.5,5.85,3,8,43,0,0.93821305,1,0.938213050365448
+2024-12-12,Kristaps Porziņģis,Boston Celtics,BOS,DET,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.6,5.85,1,8,41,0,0.9381871,1,0.9381871223449707
+2025-03-26,OG Anunoby,New York Knicks,NYK,LAC,Running Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.9,5.55,1,1,25,0,0.9381076,1,0.9381076097488403
+2025-02-27,Giannis Antetokounmpo,Milwaukee Bucks,MIL,DEN,Tip Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.0,5.25,2,3,2,0,0.93793243,1,0.9379324316978455
+2024-12-20,Giannis Antetokounmpo,Milwaukee Bucks,CLE,MIL,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,-0.1,6.65,2,0,14,0,0.9378859,1,0.9378858804702759
+2025-01-21,Scottie Barnes,Toronto Raptors,TOR,ORL,Running Alley Oop Layup Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.9,5.35,2,10,17,0,0.9378417,1,0.9378417134284973
+2025-03-24,Rudy Gobert,Minnesota Timberwolves,IND,MIN,Putback Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,0.6,6.35,2,4,49,0,0.93772936,1,0.9377293586730957
+2024-12-23,Rudy Gobert,Minnesota Timberwolves,ATL,MIN,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,-0.1,6.55,2,4,49,0,0.93768114,1,0.9376811385154724
+2025-01-12,Giannis Antetokounmpo,Milwaukee Bucks,NYK,MIL,Tip Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.0,5.25,1,2,55,0,0.9376285,1,0.9376285076141357
+2024-11-17,Amir Coffey,LA Clippers,LAC,UTA,Running Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.2,5.75,2,8,41,0,0.93746287,1,0.9374628663063049
+2024-12-30,Domantas Sabonis,Sacramento Kings,SAC,DAL,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,-0.7,6.05,1,10,0,0,0.9373644,1,0.937364399433136
+2025-01-06,Goga Bitadze,Orlando Magic,NYK,ORL,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,5.95,3,10,11,0,0.93716186,1,0.9371618628501892
+2025-01-17,Giannis Antetokounmpo,Milwaukee Bucks,MIL,TOR,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,0.1,6.75,1,8,30,0,0.9368987,1,0.9368987083435059
+2025-02-10,Brook Lopez,Milwaukee Bucks,MIL,GSW,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,-0.5,6.35,2,6,1,0,0.9368785,1,0.936878502368927
+2024-11-01,Anthony Davis,Los Angeles Lakers,TOR,LAL,Tip Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.0,5.25,2,6,40,0,0.93685454,1,0.9368545413017273
+2025-03-27,Chet Holmgren,Oklahoma City Thunder,OKC,MEM,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,-0.6,4.45,3,6,41,0,0.9366964,1,0.9366964101791382
+2024-11-29,Nic Claxton,Brooklyn Nets,BKN,ORL,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.1,5.45,2,3,11,0,0.93662685,1,0.9366268515586853
+2024-11-22,Neemias Queta,Boston Celtics,WAS,BOS,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.1,6.15,1,6,38,0,0.93662363,1,0.9366236329078674
+2025-01-15,Santi Aldama,Memphis Grizzlies,SAS,MEM,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,5.85,4,7,13,0,0.9363902,1,0.936390221118927
+2025-04-13,Goga Bitadze,Orlando Magic,ATL,ORL,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,5.75,4,11,28,0,0.93630373,1,0.9363037347793579
+2024-11-17,Naji Marshall,Dallas Mavericks,OKC,DAL,Driving Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.4,5.65,4,6,40,0,0.93629616,1,0.9362961649894714
+2024-11-19,Christian Braun,Denver Nuggets,MEM,DEN,Alley Oop Layup shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.1,6.05,4,0,7,0,0.9362733,1,0.9362732768058777
+2025-04-08,Jarrett Allen,Cleveland Cavaliers,CLE,CHI,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,-0.6,6.15,2,0,27,0,0.9361051,1,0.9361050724983215
+2024-12-30,Alex Len,Sacramento Kings,SAC,DAL,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.2,5.95,4,0,56,0,0.9360823,1,0.9360823035240173
+2025-04-04,Daniel Gafford,Dallas Mavericks,LAC,DAL,Tip Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.0,5.25,3,0,6,0,0.93604344,1,0.9360434412956238
+2025-02-08,Daniel Gafford,Dallas Mavericks,DAL,HOU,Putback Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,1,-0.8,5.95,3,11,23,0,0.9360374,1,0.9360374212265015
+2025-01-06,Jericho Sims,New York Knicks,NYK,ORL,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.5,5.15,2,0,15,0,0.9359182,1,0.9359182119369507
+2025-03-22,Trayce Jackson-Davis,Golden State Warriors,ATL,GSW,Cutting Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.9,5.55,3,4,29,0,0.9357753,1,0.9357752799987793
+2024-11-24,Bam Adebayo,Miami Heat,MIA,DAL,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.6,4.75,2,7,29,0,0.93535334,1,0.9353533387184143
+2025-01-22,Jaden McDaniels,Minnesota Timberwolves,DAL,MIN,Alley Oop Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,-0.1,6.05,2,9,26,0,0.93533444,1,0.9353344440460205
+2024-12-26,Yves Missi,New Orleans Pelicans,NOP,HOU,Dunk Shot,dunk,2PT Field Goal,Restricted Area,Center,Less Than 8 ft.,0,0.4,4.65,1,9,49,0,0.9352061,1,0.9352061152458191

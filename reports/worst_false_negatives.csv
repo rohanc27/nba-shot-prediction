@@ -1,0 +1,101 @@
+GAME_DATE,PLAYER_NAME,TEAM_NAME,HOME_TEAM,AWAY_TEAM,ACTION_TYPE,action_category,SHOT_TYPE,BASIC_ZONE,ZONE_NAME,ZONE_RANGE,SHOT_DISTANCE,LOC_X,LOC_Y,QUARTER,MINS_LEFT,SECS_LEFT,SHOT_MADE,predicted_prob,prediction,absolute_error
+2024-12-21,Ricky Council IV,Philadelphia 76ers,CLE,PHI,Step Back Jump shot,stepback,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,38,-20.7,37.35,2,0,0,1,0.085865416,0,0.9141345843672752
+2025-03-15,Jeremy Sochan,San Antonio Spurs,SAS,NOP,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Back Court,Back Court Shot,41,1.7,46.35,3,0,0,1,0.08769727,0,0.9123027324676514
+2024-12-01,Tre Jones,San Antonio Spurs,SAC,SAS,Floating Jump shot,floater,3PT Field Goal,Above the Break 3,Center,24+ ft.,40,-9.8,44.25,1,0,0,1,0.091401346,0,0.9085986539721489
+2024-12-27,Keldon Johnson,San Antonio Spurs,BKN,SAS,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,38,17.6,39.25,1,0,0,1,0.09308453,0,0.906915470957756
+2024-11-08,Guerschon Yabusele,Philadelphia 76ers,LAL,PHI,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,38,-17.9,39.65,3,0,0,1,0.09546854,0,0.9045314565300941
+2025-02-10,Dalano Banton,Portland Trail Blazers,DEN,POR,Driving Floating Jump Shot,floater,3PT Field Goal,Above the Break 3,Center,24+ ft.,37,-0.9,42.75,1,0,0,1,0.098383,0,0.9016169980168343
+2025-03-06,Stephen Curry,Golden State Warriors,BKN,GSW,Turnaround Jump Shot,turnaround,3PT Field Goal,Above the Break 3,Center,24+ ft.,38,-7.8,42.55,2,0,0,1,0.100216694,0,0.899783305823803
+2025-03-15,Jimmy Butler III,Golden State Warriors,GSW,NYK,Driving Floating Bank Jump Shot,floater,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,37,17.0,38.95,1,0,0,1,0.10431814,0,0.8956818580627441
+2025-02-01,Reed Sheppard,Houston Rockets,HOU,BKN,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,30,4.2,35.85,3,0,0,1,0.10863539,0,0.891364611685276
+2025-02-23,Jalen Williams,Oklahoma City Thunder,MIN,OKC,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,40,-9.0,44.45,2,0,0,1,0.10946992,0,0.8905300796031952
+2025-01-13,Jordan Poole,Washington Wizards,WAS,MIN,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,34,-18.0,34.25,2,0,0,1,0.11020035,0,0.8897996470332146
+2024-12-16,Jamal Shead,Toronto Raptors,TOR,CHI,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,29,-2.1,34.35,4,0,0,1,0.11083306,0,0.8891669362783432
+2025-02-02,AJ Green,Milwaukee Bucks,MIL,MEM,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,35,14.0,37.85,3,0,0,1,0.111561425,0,0.8884385749697685
+2025-04-05,Spencer Dinwiddie,Dallas Mavericks,LAC,DAL,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,34,0.3,40.05,3,0,0,1,0.11495899,0,0.8850410133600235
+2025-03-30,Mikal Bridges,New York Knicks,NYK,POR,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,37,7.4,41.75,1,0,0,1,0.1158889,0,0.8841110989451408
+2025-04-06,Keon Ellis,Sacramento Kings,CLE,SAC,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,43,21.0,43.15,2,0,0,1,0.11692723,0,0.8830727711319923
+2025-04-03,Brandin Podziemski,Golden State Warriors,LAL,GSW,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,33,-0.9,39.15,2,0,0,1,0.11890031,0,0.8810996934771538
+2025-03-04,Mike Conley,Minnesota Timberwolves,MIN,PHI,Running Jump Shot,running_jump,3PT Field Goal,Above the Break 3,Center,24+ ft.,35,-7.5,39.45,3,0,0,1,0.121746376,0,0.878253623843193
+2025-01-03,Miles Bridges,Charlotte Hornets,DET,CHA,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,30,10.2,34.05,2,0,0,1,0.12378076,0,0.876219242811203
+2024-12-07,Luka Dončić,Dallas Mavericks,TOR,DAL,Driving Floating Bank Jump Shot,floater,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,35,19.6,34.55,2,0,0,1,0.12705013,0,0.872949868440628
+2025-02-01,Josh Hart,New York Knicks,NYK,LAL,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,31,4.2,36.15,3,0,0,1,0.12911758,0,0.8708824217319489
+2025-03-15,Jordan Poole,Washington Wizards,DEN,WAS,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,35,15.7,36.85,4,0,2,1,0.13043267,0,0.869567334651947
+2025-03-15,OG Anunoby,New York Knicks,GSW,NYK,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,29,2.2,34.35,4,0,0,1,0.13454434,0,0.8654556572437286
+2024-12-05,Brandon Miller,Charlotte Hornets,NYK,CHA,Turnaround Fadeaway shot,fadeaway,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,31,16.5,32.55,3,0,0,1,0.13644354,0,0.8635564595460892
+2025-02-07,Marcus Sasser,Detroit Pistons,DET,PHI,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,28,-1.6,33.75,1,0,0,1,0.13697053,0,0.8630294650793076
+2024-11-29,Cory Joseph,Orlando Magic,BKN,ORL,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,32,15.3,33.65,4,0,2,1,0.13698514,0,0.8630148619413376
+2024-11-02,Johnny Juzang,Utah Jazz,DEN,UTA,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,31,-12.4,34.15,1,0,1,1,0.13822748,0,0.8617725223302841
+2025-03-02,Tyus Jones,Phoenix Suns,PHX,MIN,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,32,-0.0,37.55,1,0,0,1,0.14180145,0,0.8581985533237457
+2025-01-06,Kelly Oubre Jr.,Philadelphia 76ers,PHI,PHX,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,31,-12.0,33.95,3,0,0,1,0.14185378,0,0.8581462204456329
+2024-12-08,Nikola Jokić,Denver Nuggets,ATL,DEN,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,40,15.7,42.05,2,0,1,1,0.14247139,0,0.8575286120176315
+2024-11-13,LeBron James,Los Angeles Lakers,LAL,MEM,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,30,-11.0,33.55,1,0,0,1,0.14402026,0,0.8559797406196594
+2025-01-22,Kyrie Irving,Dallas Mavericks,DAL,MIN,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,32,-15.9,33.65,4,0,0,1,0.14449367,0,0.8555063307285309
+2025-01-23,Jaden Springer,Boston Celtics,LAL,BOS,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,28,-20.7,25.45,4,0,0,1,0.14564401,0,0.8543559908866882
+2024-11-27,Fred VanVleet,Houston Rockets,PHI,HOU,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,37,5.3,42.45,1,0,1,1,0.1466442,0,0.8533557951450348
+2024-11-29,Trey Murphy III,New Orleans Pelicans,MEM,NOP,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,32,-10.9,35.75,3,0,0,1,0.14673004,0,0.8532699644565582
+2025-04-13,Norman Powell,LA Clippers,GSW,LAC,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,36,9.2,40.45,2,0,1,1,0.14869235,0,0.8513076454401016
+2025-02-05,Darius Garland,Cleveland Cavaliers,DET,CLE,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,31,-3.8,36.15,4,0,0,1,0.150628,0,0.849371999502182
+2025-03-07,Danté Exum,Dallas Mavericks,DAL,MEM,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,33,-20.7,31.65,3,0,0,1,0.15153062,0,0.8484693765640259
+2024-12-03,Tristan da Silva,Orlando Magic,NYK,ORL,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,28,-6.5,33.05,4,0,1,1,0.15699978,0,0.8430002182722092
+2025-02-26,Coby White,Chicago Bulls,CHI,LAC,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,32,6.1,36.95,4,0,1,1,0.15857619,0,0.8414238095283508
+2025-04-06,Stephen Curry,Golden State Warriors,GSW,HOU,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,36,-17.0,37.75,2,0,1,1,0.15953507,0,0.8404649347066879
+2024-12-08,Stephen Curry,Golden State Warriors,GSW,MIN,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,38,20.5,38.05,3,0,1,1,0.16092643,0,0.8390735685825348
+2025-01-27,Jordan Poole,Washington Wizards,DAL,WAS,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,32,-0.6,37.85,3,0,2,1,0.16199607,0,0.838003933429718
+2025-01-10,Coby White,Chicago Bulls,CHI,WAS,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,30,6.6,35.45,3,0,1,1,0.17003614,0,0.8299638628959656
+2025-03-06,Dalton Knecht,Los Angeles Lakers,LAL,NYK,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,29,-12.9,31.45,3,0,0,1,0.17021114,0,0.829788863658905
+2024-11-09,Devin Vassell,San Antonio Spurs,SAS,UTA,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,29,15.3,30.35,4,0,0,1,0.17092283,0,0.8290771692991257
+2025-03-13,Gui Santos,Golden State Warriors,GSW,SAC,Putback Layup Shot,layup,2PT Field Goal,Mid-Range,Left Side,8-16 ft.,9,9.2,8.15,3,0,0,1,0.17220053,0,0.8277994692325592
+2024-11-12,Deni Avdija,Portland Trail Blazers,POR,MIN,Step Back Jump shot,stepback,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,28,12.3,30.85,3,0,0,1,0.17234206,0,0.82765793800354
+2025-03-21,Bam Adebayo,Miami Heat,MIA,HOU,Running Pull-Up Jump Shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,28,-2.9,33.15,4,0,2,1,0.17450924,0,0.8254907578229904
+2024-12-29,Chris Boucher,Toronto Raptors,TOR,ATL,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,31,20.6,28.45,2,0,0,1,0.17498054,0,0.8250194638967514
+2024-12-15,Marcus Smart,Memphis Grizzlies,LAL,MEM,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,29,11.8,32.15,4,0,1,1,0.17654566,0,0.8234543353319168
+2024-12-05,Fred VanVleet,Houston Rockets,GSW,HOU,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,31,0.7,37.15,1,0,2,1,0.17788042,0,0.8221195787191391
+2025-01-19,Cory Joseph,Orlando Magic,ORL,DEN,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,29,14.6,31.05,4,0,1,1,0.17943846,0,0.8205615431070328
+2024-11-17,Julius Randle,Minnesota Timberwolves,MIN,PHX,Running Pull-Up Jump Shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,28,0.9,33.35,2,0,0,1,0.17949906,0,0.8205009400844574
+2025-01-24,Ty Jerome,Cleveland Cavaliers,PHI,CLE,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Center,24+ ft.,28,-8.2,32.75,3,0,0,1,0.17980498,0,0.8201950192451477
+2025-03-31,Zach LaVine,Sacramento Kings,IND,SAC,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,31,-16.1,32.05,4,0,0,1,0.18192518,0,0.8180748224258423
+2025-04-09,Harrison Barnes,San Antonio Spurs,GSW,SAS,Turnaround Jump Shot,turnaround,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,27,20.5,23.15,4,0,0,1,0.18249036,0,0.8175096362829208
+2025-01-04,Damian Lillard,Milwaukee Bucks,MIL,POR,Fadeaway Jump Shot,fadeaway,3PT Field Goal,Above the Break 3,Center,24+ ft.,28,4.5,33.15,1,0,0,1,0.18255074,0,0.8174492567777634
+2025-04-06,Coby White,Chicago Bulls,CHA,CHI,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,32,18.0,32.75,2,0,0,1,0.18678093,0,0.8132190704345703
+2025-01-18,Malik Beasley,Detroit Pistons,DET,PHX,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,29,11.2,32.95,4,0,1,1,0.18722191,0,0.8127780854701996
+2025-03-21,Kenrich Williams,Oklahoma City Thunder,OKC,CHA,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,29,-11.6,32.05,1,0,0,1,0.18745889,0,0.8125411123037338
+2025-03-19,Fred VanVleet,Houston Rockets,ORL,HOU,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,32,-21.7,29.45,2,0,0,1,0.18754572,0,0.8124542832374573
+2025-01-25,Josh Okogie,Charlotte Hornets,CHA,NOP,Driving Layup Shot,layup,2PT Field Goal,In The Paint (Non-RA),Center,Less Than 8 ft.,6,-4.3,10.65,3,0,0,1,0.18911965,0,0.8108803480863571
+2025-01-18,Dalano Banton,Portland Trail Blazers,POR,HOU,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,27,5.1,32.75,3,0,0,1,0.1896178,0,0.8103822022676468
+2025-03-04,Ja'Kobe Walter,Toronto Raptors,ORL,TOR,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,24,-3.6,29.95,4,0,0,1,0.1900096,0,0.809990406036377
+2025-04-04,Tim Hardaway Jr.,Detroit Pistons,TOR,DET,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,29,-18.9,27.55,3,0,0,1,0.19020358,0,0.8097964227199554
+2025-03-16,Naji Marshall,Dallas Mavericks,DAL,PHI,Jump Bank Shot,other,3PT Field Goal,Above the Break 3,Center,24+ ft.,30,8.7,34.15,1,0,0,1,0.19194594,0,0.8080540597438812
+2024-12-19,Anfernee Simons,Portland Trail Blazers,POR,DEN,Step Back Jump shot,stepback,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,28,11.9,31.25,3,0,0,1,0.19321287,0,0.8067871332168579
+2024-11-16,Jayson Tatum,Boston Celtics,BOS,TOR,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,29,-15.0,30.75,5,0,0,1,0.19366725,0,0.8063327521085739
+2025-03-17,Zach LaVine,Sacramento Kings,SAC,MEM,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,31,18.0,31.55,2,0,0,1,0.19401678,0,0.8059832155704498
+2025-03-11,Jalen Wilson,Brooklyn Nets,CLE,BKN,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,28,-22.7,22.55,1,0,0,1,0.19411337,0,0.8058866262435913
+2025-01-13,Keldon Johnson,San Antonio Spurs,LAL,SAS,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,28,18.0,27.05,3,0,0,1,0.1950225,0,0.8049775063991547
+2025-03-26,Colby Jones,Washington Wizards,PHI,WAS,Running Pull-Up Jump Shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,24,-15.3,24.65,1,0,0,1,0.19521603,0,0.804783970117569
+2024-11-23,Max Christie,Los Angeles Lakers,LAL,DEN,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,27,13.7,29.55,4,0,0,1,0.19586165,0,0.8041383475065231
+2025-04-13,Jamaree Bouyea,Milwaukee Bucks,MIL,DET,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,26,16.7,25.65,3,0,0,1,0.19683641,0,0.8031635880470276
+2025-04-01,Terance Mann,Atlanta Hawks,ATL,POR,Driving Layup Shot,layup,2PT Field Goal,In The Paint (Non-RA),Left Side,8-16 ft.,8,7.8,8.65,3,0,0,1,0.19695967,0,0.8030403256416321
+2024-11-03,Antonio Reeves,New Orleans Pelicans,NOP,ATL,Step Back Jump shot,stepback,3PT Field Goal,Above the Break 3,Center,24+ ft.,26,0.1,31.55,4,0,2,1,0.19712208,0,0.8028779178857803
+2025-03-13,Patrick Williams,Chicago Bulls,CHI,BKN,Driving Layup Shot,layup,2PT Field Goal,In The Paint (Non-RA),Center,Less Than 8 ft.,6,3.2,11.05,1,0,0,1,0.19722508,0,0.8027749210596085
+2025-01-08,Ricky Council IV,Philadelphia 76ers,PHI,WAS,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,28,-14.6,29.55,3,0,1,1,0.19851983,0,0.8014801740646362
+2024-12-29,Dillon Brooks,Houston Rockets,HOU,MIA,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,29,-14.5,30.55,4,0,1,1,0.19909483,0,0.800905168056488
+2025-04-10,Jarace Walker,Indiana Pacers,IND,CLE,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,27,3.3,32.55,1,0,0,1,0.1992078,0,0.8007922023534775
+2025-01-15,Jeff Dowtin Jr.,Philadelphia 76ers,PHI,NYK,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,27,-7.7,31.65,3,0,0,1,0.2003828,0,0.799617201089859
+2025-03-14,Jalen Green,Houston Rockets,HOU,DAL,Step Back Jump shot,stepback,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,28,12.9,30.35,3,0,0,1,0.20163651,0,0.7983634918928146
+2024-12-19,Cody Martin,Charlotte Hornets,WAS,CHA,Turnaround Jump Shot,turnaround,3PT Field Goal,Left Corner 3,Left Side,24+ ft.,24,23.4,12.65,1,0,0,1,0.20221466,0,0.7977853417396545
+2025-03-10,Luka Dončić,Los Angeles Lakers,BKN,LAL,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,35,12.9,38.05,4,0,11,1,0.20246546,0,0.7975345402956009
+2025-01-19,Shaedon Sharpe,Portland Trail Blazers,POR,CHI,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,30,-17.4,29.75,1,0,1,1,0.20263016,0,0.7973698377609253
+2024-12-10,Isaiah Joe,Oklahoma City Thunder,OKC,DAL,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Center,24+ ft.,28,0.4,33.25,3,0,0,1,0.20299713,0,0.7970028668642044
+2025-04-11,Kawhi Leonard,LA Clippers,SAC,LAC,Step Back Jump shot,stepback,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,28,-14.1,30.15,2,0,0,1,0.2045183,0,0.7954816967248917
+2025-03-18,Baylor Scheierman,Boston Celtics,BOS,BKN,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,26,17.4,24.65,3,0,0,1,0.20455505,0,0.7954449504613876
+2025-01-04,Coby White,Chicago Bulls,CHI,NYK,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,30,12.3,33.25,3,0,2,1,0.20579107,0,0.7942089289426804
+2025-02-27,Damian Lillard,Milwaukee Bucks,MIL,DEN,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Right Side Center,24+ ft.,30,-15.1,32.05,1,0,0,1,0.20630632,0,0.7936936765909195
+2024-11-29,Sam Hauser,Boston Celtics,CHI,BOS,Turnaround Fadeaway shot,fadeaway,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,25,22.5,17.15,4,0,0,1,0.2066092,0,0.7933907955884933
+2024-11-01,Jalen Williams,Oklahoma City Thunder,POR,OKC,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,31,18.6,31.15,2,0,1,1,0.20697199,0,0.7930280119180679
+2025-01-04,Coby White,Chicago Bulls,CHI,NYK,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,28,16.8,28.75,1,0,0,1,0.20702368,0,0.7929763197898865
+2024-11-03,Jose Alvarado,New Orleans Pelicans,NOP,ATL,Fadeaway Jump Shot,fadeaway,2PT Field Goal,In The Paint (Non-RA),Center,8-16 ft.,13,-4.5,18.05,1,0,0,1,0.20726547,0,0.7927345335483551
+2025-02-23,Julian Champagnie,San Antonio Spurs,NOP,SAS,Turnaround Jump Shot,turnaround,3PT Field Goal,Right Corner 3,Right Side,24+ ft.,23,-23.2,5.95,1,0,0,1,0.20919207,0,0.7908079326152802
+2025-03-06,Cam Thomas,Brooklyn Nets,BKN,GSW,Pullup Jump shot,pullup,3PT Field Goal,Above the Break 3,Center,24+ ft.,34,10.0,38.35,4,0,10,1,0.21039993,0,0.7896000742912292
+2024-11-12,Dalano Banton,Portland Trail Blazers,POR,MIN,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,25,8.8,28.85,1,0,0,1,0.21105719,0,0.788942813873291
+2025-03-26,Colby Jones,Washington Wizards,PHI,WAS,Pullup Jump shot,pullup,3PT Field Goal,Right Corner 3,Right Side,24+ ft.,24,-23.9,10.45,3,0,0,1,0.21185264,0,0.788147360086441
+2025-01-12,Jaylin Williams,Oklahoma City Thunder,WAS,OKC,Jump Shot,jump_shot,3PT Field Goal,Above the Break 3,Left Side Center,24+ ft.,31,17.2,32.05,1,0,1,1,0.21195377,0,0.7880462259054184
