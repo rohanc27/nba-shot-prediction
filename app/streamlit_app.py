@@ -81,8 +81,18 @@ FEATURES = [
 
 @st.cache_resource
 def load_model():
-    return joblib.load(MODEL_PATH)
+    try:
+        return joblib.load(MODEL_PATH)
+    except AttributeError:
+        st.warning("Rebuilding model artifact for this Python environment. This may take a few minutes on first launch.")
 
+        from src.models.tune_xgb import main as tune_xgb_main
+        from src.models.freeze_final_model import main as freeze_final_main
+
+        tune_xgb_main()
+        freeze_final_main()
+
+        return joblib.load(MODEL_PATH)
 
 @st.cache_data
 def load_data():
