@@ -9,6 +9,8 @@ from __future__ import annotations
 from pathlib import Path
 
 import joblib
+import matplotlib.patches as patches
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import streamlit as st
@@ -82,8 +84,72 @@ def load_model():
 
 @st.cache_data
 def load_data():
-    df = pd.read_parquet(DATA_PATH)
-    return df
+    return pd.read_parquet(DATA_PATH)
+
+
+def add_css() -> None:
+    st.markdown(
+        """
+        <style>
+        .block-container {
+            padding-top: 1.2rem;
+            padding-bottom: 1rem;
+            max-width: 95%;
+        }
+
+        h1 {
+            font-size: 3rem !important;
+        }
+
+        h2, h3 {
+            margin-top: 0.4rem;
+        }
+
+        div[data-testid="stMetricValue"] {
+            font-size: 3.2rem;
+        }
+
+        .prediction-card {
+            border: 1px solid rgba(250,250,250,0.15);
+            border-radius: 18px;
+            padding: 28px;
+            background: rgba(255,255,255,0.035);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .big-prob {
+            font-size: 4.4rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .subtle {
+            color: rgba(250,250,250,0.65);
+            font-size: 0.95rem;
+        }
+
+        .good {
+            color: #21c55d;
+            font-weight: 700;
+        }
+
+        .bad {
+            color: #ef4444;
+            font-weight: 700;
+        }
+
+        .info-card {
+            border: 1px solid rgba(250,250,250,0.12);
+            border-radius: 14px;
+            padding: 18px;
+            background: rgba(255,255,255,0.025);
+            height: 100%;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 def compute_shot_angle(loc_x: float, loc_y: float) -> float:
@@ -127,9 +193,9 @@ def infer_zone_range(shot_distance: float) -> str:
 
 def get_latest_player_row(df: pd.DataFrame, player_name: str) -> pd.Series:
     player_df = df[df["PLAYER_NAME"] == player_name].copy()
-    if player_df.empty:
-        raise ValueError(f"No rows found for player {player_name}")
-    player_df = player_df.sort_values(["GAME_DATE", "GAME_ID", "QUARTER", "MINS_LEFT", "SECS_LEFT"])
+    player_df = player_df.sort_values(
+        ["GAME_DATE", "GAME_ID", "QUARTER", "MINS_LEFT", "SECS_LEFT"]
+    )
     return player_df.iloc[-1]
 
 
@@ -182,15 +248,125 @@ def build_input_row(
     return pd.DataFrame([row[FEATURES]])
 
 
+def draw_half_court(loc_x: float, loc_y: float, probability: float):
+    fig, ax = plt.subplots(figsize=(7, 6))
+
+    # Court boundary
+    ax.add_patch(patches.Rectangle((-250, 0), 500, 470, fill=False, linewidth=2))
+
+    # Hoop and backboard
+    ax.add_patch(patches.Circle((0, 52.5), radius=7.5, fill=False, linewidth=2))
+    ax.plot([-30, 30], [40, 40], linewidth=2)
+
+    # Paint
+    ax.add_patch(patches.Rectangle((-80, 0), 160, 190, fill=False, linewidth=2))
+    ax.add_patch(patches.Rectangle((-60, 0), 120, 190, fill=False, linewidth=1))
+
+    # Free throw circle
+    ax.add_patch(patches.Circle((0, 190), radius=60, fill=False, linewidth=2))
+
+    # Restricted area
+    ax.add_patch(patches.Arc((0, 52.5), 80, 80, theta1=0, theta2=180, linewidth=2))
+
+    # Three point line
+    ax.plot([-220, -220], [0, 140], linewidth=2)
+    ax.plot([220, 220], [0, 140], linewidth=2)
+    ax.add_patch(patches.Arc((0, 52.5), 475, 475, theta1=22, theta2=158, linewidth=2))
+
+    # Shot marker
+    ax.scatter(
+        [loc_x],
+        [loc_y],
+        s=450,
+        alpha=0.9,
+        edgecolors="black",
+        linewidth=1.5,
+    )
+    ax.text(
+        loc_x,
+        loc_y + 18,
+        f"{probability * 100:.1f}%",
+        ha="center",
+        fontsize=12,
+        weight="bold",
+    )
+
+    ax.set_xlim(-260, 260)
+    ax.set_ylim(0, 480)
+    ax.set_aspect("equal")
+    ax.axis("off")
+    ax.set_title("Shot location", fontsize=16, weight="bold")
+
+    return fig
+
+
+def player_summary(df: pd.DataFrame, player: str) -> dict:
+    player_df = df[df["PLAYER_NAME"] == player]
+    return {
+        "shots": len(player_df),
+        "fg_pct": player_df["SHOT_MADE"].mean(),
+        "three_pct": player_df.loc[player_df["is_three"] == 1, "SHOT_MADE"].mean(),
+        "rim_pct": player_df.loc[player_df["BASIC_ZONE"] == "Restricted Area", "SHOT_MADE"].mean(),
+    }
+
+
+def league_average_for_context(df: pd.DataFrame, input_df: pd.DataFrame) -> float:
+    zone = input_df["BASIC_ZONE"].iloc[0]
+    action = input_df["action_category"].iloc[0]
+
+    context = df[
+        (df["BASIC_ZONE"] == zone)
+        & (df["action_category"] == action)
+    ]
+
+    if len(context) < 100:
+        context = df[df["BASIC_ZONE"] == zone]
+
+    return float(context["SHOT_MADE"].mean())
+
+
+def build_explanation(input_df: pd.DataFrame, probability: float, league_avg: float):
+    row = input_df.iloc[0]
+    explanations = []
+
+    if row["SHOT_DISTANCE"] < 8:
+        explanations.append(("Close to basket", "Boosts make probability"))
+    elif row["SHOT_DISTANCE"] >= 24:
+        explanations.append(("Long-distance shot", "Lowers make probability"))
+
+    if row["is_dunk"] == 1:
+        explanations.append(("Dunk attempt", "Very high-value shot profile"))
+
+    if row["is_late_clock"] == 1:
+        explanations.append(("Late-clock situation", "Usually lowers shot quality"))
+
+    if row["player_prior_zone_fg_pct"] > league_avg:
+        explanations.append(("Player zone history", "Shooter has strong prior results from this zone"))
+
+    if row["player_action_residual"] > 0:
+        explanations.append(("Player action skill", "Shooter is above league average for this action type"))
+
+    if probability > league_avg:
+        explanations.append(("Model vs. league average", "Prediction is above comparable league-average shot quality"))
+    else:
+        explanations.append(("Model vs. league average", "Prediction is below comparable league-average shot quality"))
+
+    return explanations[:5]
+
+
 def main():
     st.set_page_config(
         page_title="NBA Shot Probability Predictor",
         page_icon="🏀",
         layout="wide",
+        initial_sidebar_state="expanded",
     )
+    add_css()
 
     st.title("🏀 NBA Shot Probability Predictor")
-    st.caption("Interactive expected field goal model using shot geometry, player history, team context, and game state.")
+    st.caption(
+        "Interactive expected field goal model using shot geometry, player history, team context, and game state."
+    )
 
     model = load_model()
     df = load_data()
@@ -201,14 +377,17 @@ def main():
     with st.sidebar:
         st.header("Shot setup")
 
-        player = st.selectbox("Player", players, index=players.index("Stephen Curry") if "Stephen Curry" in players else 0)
-        action = st.selectbox("Shot action", actions, index=actions.index("jump_shot") if "jump_shot" in actions else 0)
+        default_player = players.index("Stephen Curry") if "Stephen Curry" in players else 0
+        player = st.selectbox("Player", players, index=default_player)
+
+        default_action = actions.index("jump_shot") if "jump_shot" in actions else 0
+        action = st.selectbox("Shot action", actions, index=default_action)
 
         quarter = st.slider("Quarter", 1, 5, 1)
         mins_left = st.slider("Minutes left", 0, 12, 6)
         secs_left = st.slider("Seconds left", 0, 59, 0)
-        is_home = st.radio("Home or away", ["Home", "Away"], horizontal=True)
-        is_home_value = 1 if is_home == "Home" else 0
+        home_choice = st.radio("Home or away", ["Home", "Away"], horizontal=True)
+        is_home_value = 1 if home_choice == "Home" else 0
 
         st.divider()
         st.subheader("Shot location")
@@ -229,14 +408,49 @@ def main():
     )
 
     probability = float(model.predict_proba(input_df)[0, 1])
+    league_avg = league_average_for_context(df, input_df)
+    diff = probability - league_avg
+    psummary = player_summary(df, player)
 
-    col1, col2 = st.columns([1.1, 1])
+    top_left, top_right = st.columns([1, 1.15])
 
-    with col1:
-        st.subheader("Prediction")
-        st.metric("Predicted make probability", f"{probability * 100:.1f}%")
+    with top_left:
+        st.markdown(
+            f"""
+            <div class="prediction-card">
+                <div class="subtle">Predicted make probability</div>
+                <div class="big-prob">{probability * 100:.1f}%</div>
+                <div class="subtle">Comparable league average: {league_avg * 100:.1f}%</div>
+                <div class="{'good' if diff >= 0 else 'bad'}">
+                    {diff * 100:+.1f} percentage points vs. league average
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
-        st.write("### Input summary")
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Shot distance", f"{input_df['SHOT_DISTANCE'].iloc[0]:.1f} ft")
+        c2.metric("Zone", str(input_df["BASIC_ZONE"].iloc[0]))
+        c3.metric("Clock", f"{mins_left}:{secs_left:02d}")
+
+        st.subheader("Player profile")
+        p1, p2, p3, p4 = st.columns(4)
+        p1.metric("Shots", f"{psummary['shots']:,}")
+        p2.metric("FG%", f"{psummary['fg_pct'] * 100:.1f}%")
+        p3.metric("3P%", f"{psummary['three_pct'] * 100:.1f}%")
+        p4.metric("Rim FG%", f"{psummary['rim_pct'] * 100:.1f}%")
+
+    with top_right:
+        fig = draw_half_court(loc_x, loc_y, probability)
+        st.pyplot(fig, width="stretch")
+
+    st.divider()
+
+    bottom_left, bottom_right = st.columns([1, 1])
+
+    with bottom_left:
+        st.subheader("Input summary")
         summary = pd.DataFrame({
             "Field": [
                 "Player",
@@ -258,37 +472,36 @@ def main():
                 str(input_df["zone_range"].iloc[0]),
                 str(quarter),
                 f"{mins_left}:{secs_left:02d}",
-                str(is_home),
+                str(home_choice),
             ],
         })
-
         st.dataframe(summary, width="stretch", hide_index=True)
 
-    with col2:
-        st.subheader("Simple court view")
+    with bottom_right:
+        st.subheader("Why this prediction?")
+        explanation = build_explanation(input_df, probability, league_avg)
 
-        court_df = pd.DataFrame({
-            "LOC_X": [loc_x],
-            "LOC_Y": [loc_y],
-            "Prediction": [probability],
-        })
-
-        st.scatter_chart(
-            court_df,
-            x="LOC_X",
-            y="LOC_Y",
-            size="Prediction",
-            height=500,
-        )
-
-        st.caption("Current version uses sliders for shot location. Later we can upgrade this to clickable court selection.")
+        for title, detail in explanation:
+            st.markdown(
+                f"""
+                <div class="info-card">
+                    <b>{title}</b><br>
+                    <span class="subtle">{detail}</span>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
     with st.expander("Model notes"):
         st.write(
             """
-            This prediction uses a trained XGBoost model. Features include shot geometry,
-            player historical shooting priors, team offensive context, opponent defensive context,
-            shot profile interactions, player shot tendencies, and residual player skill features.
+            This prediction uses a trained XGBoost expected-field-goal model.
+            Features include shot geometry, leakage-free player historical priors,
+            team offensive context, opponent defensive context, shot profile interactions,
+            player shot tendencies, and residual player skill features.
+
+            The explanation section is a readable model-context summary. A future version
+            can add true per-shot SHAP explanations.
             """
         )
 
