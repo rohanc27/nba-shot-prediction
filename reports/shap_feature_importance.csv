@@ -1,0 +1,35 @@
+feature,mean_abs_shap
+numeric__SHOT_DISTANCE,0.21485966
+numeric__player_prior_zone_fg_pct,0.16493523
+binary__is_dunk,0.11167099
+numeric__LOC_Y,0.08115237
+numeric__abs_angle_deg,0.059671752
+numeric__player_prior_zone_shots,0.042220734
+numeric__player_prior_shots,0.040824965
+binary__is_layup,0.035515297
+numeric__seconds_remaining_in_quarter,0.031780843
+numeric__player_prior_fg_pct,0.030757537
+categorical__action_category_jump_shot,0.022542829
+numeric__LOC_X,0.019962644
+numeric__QUARTER,0.019791452
+numeric__shot_angle_deg,0.019171854
+categorical__action_category_dunk,0.014238063
+categorical__action_category_fadeaway,0.009311098
+categorical__action_category_layup,0.0071788933
+categorical__BASIC_ZONE_Restricted Area,0.0070207617
+categorical__BASIC_ZONE_In The Paint (Non-RA),0.0063652894
+categorical__action_category_running_jump,0.0051271357
+categorical__action_category_floater,0.0048065297
+categorical__action_category_turnaround,0.0038107045
+categorical__action_category_pullup,0.0036529275
+categorical__action_category_other,0.0031402984
+binary__is_three,0.003007345
+categorical__action_category_hook,0.0027107121
+categorical__BASIC_ZONE_Above the Break 3,0.002575301
+categorical__action_category_stepback,0.0021958188
+binary__is_corner_3,0.0019854186
+categorical__BASIC_ZONE_Mid-Range,0.0014451096
+binary__is_late_clock,0.0006069028
+categorical__BASIC_ZONE_Left Corner 3,0.00032433833
+binary__is_overtime,0.00013873985
+categorical__BASIC_ZONE_Right Corner 3,3.4358923e-06
