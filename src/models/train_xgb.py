@@ -39,8 +39,14 @@ NUMERIC_FEATURES = [
     "QUARTER",
     "player_prior_fg_pct",
     "player_prior_zone_fg_pct",
+    "player_prior_action_fg_pct",
+    "player_prior_2pt_pct",
+    "player_prior_3pt_pct",
     "player_prior_shots",
     "player_prior_zone_shots",
+    "player_prior_action_shots",
+    "player_prior_2pt_shots",
+    "player_prior_3pt_shots",
 ]
 
 BINARY_FEATURES = [

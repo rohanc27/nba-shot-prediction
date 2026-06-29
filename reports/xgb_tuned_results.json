@@ -1,0 +1,22 @@
+{
+  "best_validation_auc": 0.6587211283560133,
+  "best_params": {
+    "classifier__colsample_bytree": 0.7183350457293156,
+    "classifier__gamma": 2.8898084610460213,
+    "classifier__learning_rate": 0.04869268349290269,
+    "classifier__max_depth": 4,
+    "classifier__min_child_weight": 17,
+    "classifier__n_estimators": 761,
+    "classifier__reg_alpha": 0.17711067940704894,
+    "classifier__reg_lambda": 5.202292921764571,
+    "classifier__subsample": 0.9838750019509056
+  },
+  "test_metrics": {
+    "accuracy": 0.6302406282818136,
+    "auc": 0.6579497345178598,
+    "log_loss": 0.6403507340605953,
+    "brier_score": 0.22546878442070897,
+    "n_samples": 219010,
+    "baseline_predict_majority": 0.5317382767910142
+  }
+}
