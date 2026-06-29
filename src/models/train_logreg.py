@@ -65,6 +65,9 @@ NUMERIC_FEATURES = [
     "opponent_allowed_zone_shots",
     "opponent_allowed_2pt_shots",
     "opponent_allowed_3pt_shots",
+    "player_tendency_zone_rate",
+    "player_tendency_action_rate",
+    "player_tendency_shot_profile_rate",
 ]
 
 BINARY_FEATURES = [

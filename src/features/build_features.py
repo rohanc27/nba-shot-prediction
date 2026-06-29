@@ -20,6 +20,7 @@ from src.features.player_features import compute_player_priors
 from src.features.team_features import compute_team_offense_priors
 from src.features.opponent_features import compute_opponent_defense_priors
 from src.features.shot_profile_features import add_shot_profile_features
+from src.features.tendency_features import compute_player_tendencies
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
@@ -101,6 +102,9 @@ def main() -> None:
 
     print("\nComputing opponent defensive priors...")
     df = compute_opponent_defense_priors(df)
+
+    print("\nComputing player shot tendency features...")
+    df = compute_player_tendencies(df)
 
     print(f"\nWriting {len(df):,} shots to {args.output}")
     df.to_parquet(args.output, index=False)
