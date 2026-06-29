@@ -17,7 +17,9 @@ import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = PROJECT_ROOT / "models" / "xgb_final.joblib"
-DATA_PATH = PROJECT_ROOT / "data" / "processed" / "shots_features.parquet"
+PLAYER_LOOKUP_PATH = PROJECT_ROOT / "data" / "processed" / "app_player_lookup.parquet"
+LEAGUE_CONTEXT_PATH = PROJECT_ROOT / "data" / "processed" / "app_league_context.parquet"
+LEAGUE_ZONE_PATH = PROJECT_ROOT / "data" / "processed" / "app_league_zone.parquet"
 
 FEATURES = [
     "SHOT_DISTANCE",
@@ -84,7 +86,10 @@ def load_model():
 
 @st.cache_data
 def load_data():
-    return pd.read_parquet(DATA_PATH)
+    player_lookup = pd.read_parquet(PLAYER_LOOKUP_PATH)
+    league_context = pd.read_parquet(LEAGUE_CONTEXT_PATH)
+    league_zone = pd.read_parquet(LEAGUE_ZONE_PATH)
+    return player_lookup, league_context, league_zone
 
 
 def add_css() -> None:
@@ -301,29 +306,35 @@ def draw_half_court(loc_x: float, loc_y: float, probability: float):
 
 
 def player_summary(df: pd.DataFrame, player: str) -> dict:
-    player_df = df[df["PLAYER_NAME"] == player]
+    row = df[df["PLAYER_NAME"] == player].iloc[0]
     return {
-        "shots": len(player_df),
-        "fg_pct": player_df["SHOT_MADE"].mean(),
-        "three_pct": player_df.loc[player_df["is_three"] == 1, "SHOT_MADE"].mean(),
-        "rim_pct": player_df.loc[player_df["BASIC_ZONE"] == "Restricted Area", "SHOT_MADE"].mean(),
+        "shots": int(row["app_shots"]),
+        "fg_pct": float(row["app_fg_pct"]),
+        "three_pct": float(row["app_three_pct"]),
+        "rim_pct": float(row["app_rim_pct"]),
     }
 
-
-def league_average_for_context(df: pd.DataFrame, input_df: pd.DataFrame) -> float:
+def league_average_for_context(
+    league_context: pd.DataFrame,
+    league_zone: pd.DataFrame,
+    input_df: pd.DataFrame,
+) -> float:
     zone = input_df["BASIC_ZONE"].iloc[0]
     action = input_df["action_category"].iloc[0]
 
-    context = df[
-        (df["BASIC_ZONE"] == zone)
-        & (df["action_category"] == action)
+    context = league_context[
+        (league_context["BASIC_ZONE"] == zone)
+        & (league_context["action_category"] == action)
     ]
 
-    if len(context) < 100:
-        context = df[df["BASIC_ZONE"] == zone]
+    if len(context) > 0 and int(context["league_context_shots"].iloc[0]) >= 100:
+        return float(context["league_context_fg_pct"].iloc[0])
 
-    return float(context["SHOT_MADE"].mean())
+    zone_context = league_zone[league_zone["BASIC_ZONE"] == zone]
+    if len(zone_context) > 0:
+        return float(zone_context["league_zone_fg_pct"].iloc[0])
 
+    return 0.47
 
 def build_explanation(input_df: pd.DataFrame, probability: float, league_avg: float):
     row = input_df.iloc[0]
@@ -369,7 +380,7 @@ def main():
     )
 
     model = load_model()
-    df = load_data()
+    df, league_context, league_zone = load_data()
 
     players = sorted(df["PLAYER_NAME"].dropna().unique())
     actions = sorted(df["action_category"].dropna().unique())
@@ -408,7 +419,7 @@ def main():
     )
 
     probability = float(model.predict_proba(input_df)[0, 1])
-    league_avg = league_average_for_context(df, input_df)
+    league_avg = league_average_for_context(league_context, league_zone, input_df)
     diff = probability - league_avg
     psummary = player_summary(df, player)
 
