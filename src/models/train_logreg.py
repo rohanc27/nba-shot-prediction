@@ -68,6 +68,9 @@ NUMERIC_FEATURES = [
     "player_tendency_zone_rate",
     "player_tendency_action_rate",
     "player_tendency_shot_profile_rate",
+    "player_zone_residual",
+    "player_action_residual",
+    "player_profile_residual",
 ]
 
 BINARY_FEATURES = [

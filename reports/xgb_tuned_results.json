@@ -1,5 +1,5 @@
 {
-  "best_validation_auc": 0.659118202473601,
+  "best_validation_auc": 0.6594049226768258,
   "best_params": {
     "classifier__colsample_bytree": 0.9363051680728727,
     "classifier__gamma": 3.4429223330253738,
@@ -12,10 +12,10 @@
     "classifier__subsample": 0.7681653099912698
   },
   "test_metrics": {
-    "accuracy": 0.6296516140815488,
-    "auc": 0.6582659246249831,
-    "log_loss": 0.6402760403508458,
-    "brier_score": 0.22543381945499957,
+    "accuracy": 0.6301858362631844,
+    "auc": 0.6583605124414881,
+    "log_loss": 0.640199784866847,
+    "brier_score": 0.22538802891317947,
     "n_samples": 219010,
     "baseline_predict_majority": 0.5317382767910142
   }
