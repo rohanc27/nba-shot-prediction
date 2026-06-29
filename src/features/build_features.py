@@ -19,6 +19,7 @@ from src.features.action_features import categorize_action
 from src.features.player_features import compute_player_priors
 from src.features.team_features import compute_team_offense_priors
 from src.features.opponent_features import compute_opponent_defense_priors
+from src.features.shot_profile_features import add_shot_profile_features
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
@@ -44,6 +45,7 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     df["is_three"] = (df["SHOT_TYPE"] == "3PT Field Goal").astype(int)
 
     df["action_category"] = df["ACTION_TYPE"].apply(categorize_action)
+    df = add_shot_profile_features(df)
     df["is_layup"] = (df["action_category"] == "layup").astype(int)
     df["is_dunk"] = (df["action_category"] == "dunk").astype(int)
 

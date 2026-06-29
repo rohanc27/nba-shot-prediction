@@ -60,6 +60,8 @@ FEATURES = [
     "is_overtime",
     "action_category",
     "BASIC_ZONE",
+    "shot_profile",
+    "zone_range",
 ]
 
 TARGET = "SHOT_MADE"
