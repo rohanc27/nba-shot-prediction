@@ -17,6 +17,7 @@ import pandas as pd
 
 from src.features.action_features import categorize_action
 from src.features.player_features import compute_player_priors
+from src.features.team_features import compute_team_offense_priors
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
@@ -91,6 +92,9 @@ def main() -> None:
 
     print("\nComputing player priors (this takes ~30s)...")
     df = compute_player_priors(df, prior_weight=args.prior_weight)
+
+    print("\nComputing team offensive priors...")
+    df = compute_team_offense_priors(df)
 
     print(f"\nWriting {len(df):,} shots to {args.output}")
     df.to_parquet(args.output, index=False)

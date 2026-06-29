@@ -48,6 +48,14 @@ NUMERIC_FEATURES = [
     "player_prior_action_shots",
     "player_prior_2pt_shots",
     "player_prior_3pt_shots",
+    "team_prior_fg_pct",
+    "team_prior_zone_fg_pct",
+    "team_prior_2pt_pct",
+    "team_prior_3pt_pct",
+    "team_prior_shots",
+    "team_prior_zone_shots",
+    "team_prior_2pt_shots",
+    "team_prior_3pt_shots",
 ]
 
 BINARY_FEATURES = [
