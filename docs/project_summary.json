@@ -1,0 +1,17 @@
+{
+  "project": "NBA Expected Field Goal Model",
+  "n_shots": 654092,
+  "final_model": "Tuned XGBoost",
+  "final_metrics": {
+    "Model": "Tuned XGBoost",
+    "Accuracy": 0.6301858362631844,
+    "AUC": 0.6583605124414881,
+    "Log Loss": 0.640199784866847,
+    "Brier": 0.22538802891317947
+  },
+  "train_seasons": [
+    "2022-23",
+    "2023-24"
+  ],
+  "test_season": "2024-25"
+}
