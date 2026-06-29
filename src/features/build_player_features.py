@@ -34,23 +34,20 @@ def compute_player_priors(
 ) -> pd.DataFrame:
     """Add per-player rolling FG% features without leakage.
 
-    For each shot, the player_prior_* features describe what we know
-    about the player from shots taken BEFORE this one. The current
-    shot's outcome is never included in its own prior.
+    For each shot, the player_prior_* features describe the player's
+    history of shots taken BEFORE this one. The current shot's outcome
+    is never included in its own prior.
 
-    Computed features:
-        - player_prior_fg_pct: overall FG% before this shot
-        - player_prior_zone_fg_pct: FG% in this zone before this shot
-        - player_prior_shots: total prior attempts (sample size)
-        - player_prior_zone_shots: prior attempts in this zone
+    Implementation: we compute the inclusive cumulative sum within each
+    group, then subtract the current row's value to get a strict prior.
+    This is mathematically equivalent to "shift down by one within group"
+    but works correctly when groups are non-contiguous in the dataframe
+    (which is the case for player x zone groups, since players' shots
+    from different zones are interleaved chronologically).
     """
     df = df.copy()
 
-    # Sort by player, then chronologically by game and within-game time.
-    # Note: within-game ordering by game time isn't perfectly available
-    # from this dataset (no event order), but per-game ordering is correct.
-    # We use GAME_DATE + GAME_ID + QUARTER + (12 - MINS_LEFT) + (60 - SECS_LEFT)
-    # as a within-game proxy.
+    # Within-game ordering for consistent chronological sort
     df["_within_game_order"] = (
         df["QUARTER"].astype(int) * 720
         + (12 - df["MINS_LEFT"].astype(int)) * 60
@@ -62,66 +59,44 @@ def compute_player_priors(
         kind="stable",
     ).reset_index(drop=True)
 
-    # League average FG% as the Bayesian prior mean
     league_fg_pct = float(df["SHOT_MADE"].mean())
     print(f"  League prior FG%: {league_fg_pct:.4f}")
     print(f"  Prior weight: {prior_weight} shots")
 
-    # ---- Per-player overall expanding FG% ----
+    # --- Per-player overall priors ---
     grouped = df.groupby("PLAYER_ID", sort=False)
-    # shift(1) so the current shot is NOT included in its own prior
-    cumulative_makes = grouped["SHOT_MADE"].cumsum().shift(1)
-    cumulative_shots = grouped["SHOT_MADE"].cumcount()
+    cum_makes_incl = grouped["SHOT_MADE"].cumsum()           # includes current
+    cum_shots_incl = grouped.cumcount() + 1                  # 1-indexed
+    # Strict prior: exclude the current row
+    prior_makes = cum_makes_incl - df["SHOT_MADE"]
+    prior_shots = cum_shots_incl - 1                         # = cumcount()
 
-    # First shot of each player gets 0 prior makes, 0 prior shots
-    # — we need to zero those out where shift produced NaN.
-    cumulative_makes = cumulative_makes.fillna(0)
-
-    # Reset cumulative_makes to zero at each player boundary
-    # (shift(1) within group via cumsum is correct, but the .shift(1)
-    # across the dataframe leaks across players. We need to mask.)
-    player_boundary = df["PLAYER_ID"] != df["PLAYER_ID"].shift(1)
-    # On boundary rows, cumulative_makes should be 0 (no prior shots)
-    cumulative_makes = np.where(player_boundary, 0, cumulative_makes)
-    cumulative_makes = pd.Series(cumulative_makes, index=df.index)
-
-    # Bayesian-smoothed FG%
     df["player_prior_fg_pct"] = (
-        (cumulative_makes + prior_weight * league_fg_pct)
-        / (cumulative_shots + prior_weight)
+        (prior_makes + prior_weight * league_fg_pct)
+        / (prior_shots + prior_weight)
     )
-    df["player_prior_shots"] = cumulative_shots.astype(int)
+    df["player_prior_shots"] = prior_shots.astype(int)
 
-    # ---- Per-player-per-zone expanding FG% ----
-    # League prior FG% by zone (to use as the prior mean for that zone)
+    # --- Per-player-per-zone priors ---
     zone_means = df.groupby("BASIC_ZONE")["SHOT_MADE"].mean()
     print(f"  Zone prior FG%s: {zone_means.to_dict()}")
-    df["_zone_league_fg_pct"] = df["BASIC_ZONE"].map(zone_means)
+    zone_league_fg_pct = df["BASIC_ZONE"].map(zone_means)
 
-    # Group by (player, zone) and compute rolling sums
     pz_grouped = df.groupby(["PLAYER_ID", "BASIC_ZONE"], sort=False)
-    pz_cum_makes = pz_grouped["SHOT_MADE"].cumsum().shift(1).fillna(0)
-    pz_cum_shots = pz_grouped["SHOT_MADE"].cumcount()
+    pz_cum_makes_incl = pz_grouped["SHOT_MADE"].cumsum()
+    pz_cum_shots_incl = pz_grouped.cumcount() + 1
+    pz_prior_makes = pz_cum_makes_incl - df["SHOT_MADE"]
+    pz_prior_shots = pz_cum_shots_incl - 1
 
-    pz_boundary = (
-        (df["PLAYER_ID"] != df["PLAYER_ID"].shift(1))
-        | (df["BASIC_ZONE"] != df["BASIC_ZONE"].shift(1))
-    )
-    pz_cum_makes = np.where(pz_boundary, 0, pz_cum_makes)
-    pz_cum_makes = pd.Series(pz_cum_makes, index=df.index)
-
-    # Bayesian smoothing using zone-specific prior
     df["player_prior_zone_fg_pct"] = (
-        (pz_cum_makes + prior_weight * df["_zone_league_fg_pct"])
-        / (pz_cum_shots + prior_weight)
+        (pz_prior_makes + prior_weight * zone_league_fg_pct)
+        / (pz_prior_shots + prior_weight)
     )
-    df["player_prior_zone_shots"] = pz_cum_shots.astype(int)
+    df["player_prior_zone_shots"] = pz_prior_shots.astype(int)
 
-    # Clean up temporary columns
-    df = df.drop(columns=["_within_game_order", "_zone_league_fg_pct"])
+    df = df.drop(columns=["_within_game_order"])
 
     return df
-
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
