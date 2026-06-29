@@ -53,6 +53,15 @@ NUMERIC_FEATURES = [
     "team_prior_zone_shots",
     "team_prior_2pt_shots",
     "team_prior_3pt_shots",
+    "is_home",
+    "opponent_allowed_fg_pct",
+    "opponent_allowed_zone_fg_pct",
+    "opponent_allowed_2pt_pct",
+    "opponent_allowed_3pt_pct",
+    "opponent_allowed_shots",
+    "opponent_allowed_zone_shots",
+    "opponent_allowed_2pt_shots",
+    "opponent_allowed_3pt_shots",
 ]
 
 BINARY_FEATURES = [
