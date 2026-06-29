@@ -1,35 +1,58 @@
 feature,mean_abs_shap
-numeric__SHOT_DISTANCE,0.21485966
-numeric__player_prior_zone_fg_pct,0.16493523
-binary__is_dunk,0.11167099
-numeric__LOC_Y,0.08115237
-numeric__abs_angle_deg,0.059671752
-numeric__player_prior_zone_shots,0.042220734
-numeric__player_prior_shots,0.040824965
-binary__is_layup,0.035515297
-numeric__seconds_remaining_in_quarter,0.031780843
-numeric__player_prior_fg_pct,0.030757537
-categorical__action_category_jump_shot,0.022542829
-numeric__LOC_X,0.019962644
-numeric__QUARTER,0.019791452
-numeric__shot_angle_deg,0.019171854
-categorical__action_category_dunk,0.014238063
-categorical__action_category_fadeaway,0.009311098
-categorical__action_category_layup,0.0071788933
-categorical__BASIC_ZONE_Restricted Area,0.0070207617
-categorical__BASIC_ZONE_In The Paint (Non-RA),0.0063652894
-categorical__action_category_running_jump,0.0051271357
-categorical__action_category_floater,0.0048065297
-categorical__action_category_turnaround,0.0038107045
-categorical__action_category_pullup,0.0036529275
-categorical__action_category_other,0.0031402984
-binary__is_three,0.003007345
-categorical__action_category_hook,0.0027107121
-categorical__BASIC_ZONE_Above the Break 3,0.002575301
-categorical__action_category_stepback,0.0021958188
-binary__is_corner_3,0.0019854186
-categorical__BASIC_ZONE_Mid-Range,0.0014451096
-binary__is_late_clock,0.0006069028
-categorical__BASIC_ZONE_Left Corner 3,0.00032433833
-binary__is_overtime,0.00013873985
-categorical__BASIC_ZONE_Right Corner 3,3.4358923e-06
+numeric__SHOT_DISTANCE,0.27740258
+numeric__player_prior_action_fg_pct,0.11931157
+numeric__player_prior_zone_fg_pct,0.11359689
+numeric__team_prior_zone_shots,0.07415251
+binary__is_layup,0.0740211
+numeric__LOC_Y,0.07212531
+numeric__abs_angle_deg,0.06085547
+numeric__player_prior_action_shots,0.05950205
+numeric__team_prior_shots,0.049864348
+binary__is_dunk,0.045196492
+numeric__opponent_allowed_zone_shots,0.038934838
+numeric__seconds_remaining_in_quarter,0.026902817
+numeric__team_prior_2pt_shots,0.02485556
+numeric__player_prior_zone_shots,0.024085173
+numeric__player_prior_3pt_pct,0.023849867
+numeric__opponent_allowed_2pt_shots,0.02254997
+numeric__QUARTER,0.022030998
+numeric__LOC_X,0.021987222
+numeric__player_prior_shots,0.021576915
+numeric__team_prior_2pt_pct,0.0215237
+numeric__opponent_allowed_shots,0.0211451
+numeric__team_prior_zone_fg_pct,0.020711007
+numeric__opponent_allowed_fg_pct,0.01950666
+numeric__opponent_allowed_2pt_pct,0.019222986
+numeric__player_prior_fg_pct,0.017389564
+numeric__opponent_allowed_zone_fg_pct,0.017207792
+numeric__player_prior_2pt_pct,0.016747192
+numeric__opponent_allowed_3pt_shots,0.015500749
+numeric__team_prior_fg_pct,0.015193181
+numeric__player_prior_2pt_shots,0.013621872
+categorical__action_category_layup,0.012286768
+numeric__shot_angle_deg,0.011774922
+numeric__opponent_allowed_3pt_pct,0.011167763
+numeric__team_prior_3pt_pct,0.011075988
+numeric__player_prior_3pt_shots,0.008715983
+numeric__team_prior_3pt_shots,0.008237279
+categorical__BASIC_ZONE_Restricted Area,0.008035036
+categorical__action_category_running_jump,0.007749256
+categorical__action_category_stepback,0.006045683
+categorical__BASIC_ZONE_In The Paint (Non-RA),0.0051556057
+categorical__action_category_dunk,0.004459251
+categorical__action_category_fadeaway,0.0038360246
+categorical__action_category_jump_shot,0.0037763293
+categorical__action_category_pullup,0.0028575666
+binary__is_late_clock,0.0027613118
+categorical__action_category_other,0.0018260828
+categorical__action_category_hook,0.0012068665
+categorical__action_category_turnaround,0.0007578054
+categorical__action_category_floater,0.00028700678
+binary__is_overtime,0.00026225907
+categorical__BASIC_ZONE_Mid-Range,4.8254955e-05
+binary__is_corner_3,1.0338516e-05
+categorical__BASIC_ZONE_Left Corner 3,9.195061e-06
+categorical__BASIC_ZONE_Right Corner 3,5.12421e-06
+numeric__is_home,0.0
+categorical__BASIC_ZONE_Above the Break 3,0.0
+binary__is_three,0.0
