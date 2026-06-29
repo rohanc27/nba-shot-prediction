@@ -38,6 +38,10 @@ NUMERIC_FEATURES = [
     "abs_angle_deg",
     "seconds_remaining_in_quarter",
     "QUARTER",
+    "player_prior_fg_pct",
+    "player_prior_zone_fg_pct",
+    "player_prior_shots",
+    "player_prior_zone_shots",
 ]
 
 BINARY_FEATURES = [
