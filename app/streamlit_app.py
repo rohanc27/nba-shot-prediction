@@ -443,15 +443,15 @@ def main():
             unsafe_allow_html=True,
         )
 
-        c1, c2, c3 = st.columns(3)
+        c1, c2, c3 = st.columns([0.8, 1.4, 0.8])
         c1.metric("Shot distance", f"{input_df['SHOT_DISTANCE'].iloc[0]:.1f} ft")
         ZONE_ABBREV = {
             "In The Paint (Non-RA)": "Paint",
             "Restricted Area": "Rim",
-            "Mid-Range": "Mid-Range",
-            "Above the Break 3": "Above Break 3",
-            "Left Corner 3": "Left Corner 3",
-            "Right Corner 3": "Right Corner 3",
+            "Mid-Range": "Mid",
+            "Above the Break 3": "Deep 3",
+            "Left Corner 3": "L Corner 3",
+            "Right Corner 3": "R Corner 3",
         }
 
         c2.metric("Zone", ZONE_ABBREV.get(input_df["BASIC_ZONE"].iloc[0], input_df["BASIC_ZONE"].iloc[0]))
@@ -467,7 +467,7 @@ def main():
         p1.metric("Shots", format_shot_count(psummary["shots"]))
         p2.metric("FG%", f"{psummary['fg_pct'] * 100:.0f}%")
         p3.metric("3P%", f"{psummary['three_pct'] * 100:.0f}%")
-        p4.metric("Rim FG%", f"{psummary['rim_pct'] * 100:.0f}%")
+        p4.metric("Rim%", f"{psummary['rim_pct'] * 100:.0f}%")
 
     with top_right:
         fig = draw_half_court(loc_x, loc_y, probability)
