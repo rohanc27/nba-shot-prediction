@@ -112,6 +112,11 @@ def add_css() -> None:
             font-size: 3.2rem;
         }
 
+        div[data-testid="stMetricValue"] > div {
+            overflow: visible;
+            white-space: nowrap;
+        }
+
         .prediction-card {
             border: 1px solid rgba(250,250,250,0.15);
             border-radius: 18px;
@@ -440,12 +445,26 @@ def main():
 
         c1, c2, c3 = st.columns(3)
         c1.metric("Shot distance", f"{input_df['SHOT_DISTANCE'].iloc[0]:.1f} ft")
-        c2.metric("Zone", str(input_df["BASIC_ZONE"].iloc[0]))
+        ZONE_ABBREV = {
+            "In The Paint (Non-RA)": "Paint",
+            "Restricted Area": "Rim",
+            "Mid-Range": "Mid-Range",
+            "Above the Break 3": "Above Break 3",
+            "Left Corner 3": "Left Corner 3",
+            "Right Corner 3": "Right Corner 3",
+        }
+
+        c2.metric("Zone", ZONE_ABBREV.get(input_df["BASIC_ZONE"].iloc[0], input_df["BASIC_ZONE"].iloc[0]))
         c3.metric("Clock", f"{mins_left}:{secs_left:02d}")
 
         st.subheader("Player profile")
         p1, p2, p3, p4 = st.columns(4)
-        p1.metric("Shots", f"{psummary['shots']:,}")
+        def format_shot_count(n: int) -> str:
+            if n >= 1000:
+                return f"{n / 1000:.1f}K"
+            return str(n)
+
+        p1.metric("Shots", format_shot_count(psummary["shots"]))
         p2.metric("FG%", f"{psummary['fg_pct'] * 100:.0f}%")
         p3.metric("3P%", f"{psummary['three_pct'] * 100:.0f}%")
         p4.metric("Rim FG%", f"{psummary['rim_pct'] * 100:.0f}%")
