@@ -446,9 +446,9 @@ def main():
         st.subheader("Player profile")
         p1, p2, p3, p4 = st.columns(4)
         p1.metric("Shots", f"{psummary['shots']:,}")
-        p2.metric("FG%", f"{psummary['fg_pct'] * 100:.1f}%")
-        p3.metric("3P%", f"{psummary['three_pct'] * 100:.1f}%")
-        p4.metric("Rim FG%", f"{psummary['rim_pct'] * 100:.1f}%")
+        p2.metric("FG%", f"{psummary['fg_pct'] * 100:.0f}%")
+        p3.metric("3P%", f"{psummary['three_pct'] * 100:.0f}%")
+        p4.metric("Rim FG%", f"{psummary['rim_pct'] * 100:.0f}%")
 
     with top_right:
         fig = draw_half_court(loc_x, loc_y, probability)
