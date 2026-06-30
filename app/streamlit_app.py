@@ -109,7 +109,7 @@ def add_css() -> None:
         }
 
         div[data-testid="stMetricValue"] {
-            font-size: 3.2rem;
+            font-size: 2.2rem;
         }
 
         div[data-testid="stMetricValue"] > div {
