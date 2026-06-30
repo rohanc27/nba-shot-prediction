@@ -443,7 +443,7 @@ def main():
             unsafe_allow_html=True,
         )
 
-        c1, c2, c3 = st.columns([0.8, 1.4, 0.8])
+        c1, c2, c3 = st.columns([1, 1, 1])
         c1.metric("Shot distance", f"{input_df['SHOT_DISTANCE'].iloc[0]:.1f} ft")
         ZONE_ABBREV = {
             "In The Paint (Non-RA)": "Paint",
