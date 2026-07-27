@@ -88,6 +88,12 @@ BINARY_FEATURES = [
     "is_dunk",
     "is_late_clock",
     "is_overtime",
+    "distance_0_10_ft",
+    "distance_10_16_ft",
+    "distance_16_24_ft",
+    "distance_24_28_ft",
+    "distance_28_35_ft",
+    "distance_35_plus_ft",
 ]
 
 CATEGORICAL_FEATURES = [
