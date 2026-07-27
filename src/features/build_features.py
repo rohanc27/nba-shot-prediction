@@ -44,6 +44,28 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     df["shot_angle_deg"] = compute_shot_angle(df["LOC_X"], df["LOC_Y"])
     df["abs_angle_deg"] = df["shot_angle_deg"].abs()
 
+    # Distance buckets: SHOT_DISTANCE is otherwise a single continuous
+    # feature, which forces LogReg to assume make-probability is monotonic
+    # (or log-linear) in distance. It isn't -- e.g. a well-covered 26ft 3
+    # can outperform a rare 33ft heave by a wide margin that a single
+    # linear term can't represent. These give LogReg an explicit per-range
+    # intercept; XGBoost can already split on SHOT_DISTANCE at arbitrary
+    # thresholds, so this mainly helps the linear model.
+    df["distance_0_10_ft"] = (df["SHOT_DISTANCE"] <= 10).astype(int)
+    df["distance_10_16_ft"] = (
+        (df["SHOT_DISTANCE"] > 10) & (df["SHOT_DISTANCE"] <= 16)
+    ).astype(int)
+    df["distance_16_24_ft"] = (
+        (df["SHOT_DISTANCE"] > 16) & (df["SHOT_DISTANCE"] <= 24)
+    ).astype(int)
+    df["distance_24_28_ft"] = (
+        (df["SHOT_DISTANCE"] > 24) & (df["SHOT_DISTANCE"] <= 28)
+    ).astype(int)
+    df["distance_28_35_ft"] = (
+        (df["SHOT_DISTANCE"] > 28) & (df["SHOT_DISTANCE"] <= 35)
+    ).astype(int)
+    df["distance_35_plus_ft"] = (df["SHOT_DISTANCE"] > 35).astype(int)
+
     df["is_corner_3"] = df["BASIC_ZONE"].isin(
         ["Left Corner 3", "Right Corner 3"]
     ).astype(int)
