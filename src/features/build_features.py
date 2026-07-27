@@ -26,6 +26,9 @@ from src.features.player_residual_features import (
 )
 from src.features.defender_proxy_features import add_defender_proxy_features
 from src.features.player_bio_features import add_player_bio_features
+from src.features.distance_stratified_player_priors import (
+    compute_distance_stratified_player_priors,
+)
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
@@ -131,6 +134,9 @@ def main() -> None:
 
     print("\nComputing player priors (this takes ~30s)...")
     df = compute_player_priors(df, prior_weight=args.prior_weight)
+
+    print("\nComputing distance-stratified player priors...")
+    df = compute_distance_stratified_player_priors(df, prior_weight=args.prior_weight)
 
     print("\nComputing team offensive priors...")
     df = compute_team_offense_priors(df)
