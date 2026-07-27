@@ -1,0 +1,7 @@
+case,kind,shot_distance,actual_result,old_logreg_pred_pct,new_logreg_pred_pct,old_xgb_pred_pct,new_xgb_pred_pct
+"Curry, real 40ft heave (missed)",REAL,40.0,0,29.35,36.29,26.61,26.72
+"Curry, SYNTHETIC 50ft heave (distance overridden on the 40ft row)",SYNTHETIC,50.0,0,30.49,32.34,26.61,26.72
+"Mason Plumlee (rotation big), real 5ft layup [buzzer-beater, non-RA -- hard shot, see report]",REAL,5.0,0,33.7,34.05,18.3,17.21
+"Mason Plumlee (rotation big), real 0-2ft restricted-area finish, non-late-clock [clean control]",REAL,0.0,1,68.17,68.93,66.94,68.24
+"Curry, real 26ft pull-up 3 (made)",REAL,26.0,1,45.99,46.71,37.48,41.5
+"Payton Pritchard (rotation guard), real 32ft deep pull-up 3 (missed)",REAL,32.0,0,24.44,24.55,16.16,16.93
