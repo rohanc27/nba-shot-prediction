@@ -24,6 +24,8 @@ from src.features.tendency_features import compute_player_tendencies
 from src.features.player_residual_features import (
     compute_player_residual_features,
 )
+from src.features.defender_proxy_features import add_defender_proxy_features
+from src.features.player_bio_features import add_player_bio_features
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
@@ -96,6 +98,14 @@ def main() -> None:
 
     print("\nEngineering non-player features...")
     df = build_features(df)
+
+    print("\nJoining defender-distance proxy features (from 2014-15 log)...")
+    df = add_defender_proxy_features(df)
+
+    print("\nJoining player bio (height/wingspan, 2024-25 snapshot)...")
+    df = add_player_bio_features(df)
+    bio_match_rate = df["height_inches"].notna().mean()
+    print(f"  Player bio match rate: {bio_match_rate:.1%}")
 
     print("\nComputing player priors (this takes ~30s)...")
     df = compute_player_priors(df, prior_weight=args.prior_weight)
