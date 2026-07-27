@@ -1,170 +1,188 @@
 feature,mean_abs_shap
-numeric__SHOT_DISTANCE,0.28540236
-numeric__player_prior_zone_fg_pct,0.115431786
-binary__is_dunk,0.066964716
-numeric__player_prior_action_fg_pct,0.05553219
-numeric__abs_angle_deg,0.055095978
-numeric__LOC_Y,0.052797753
-numeric__team_prior_shots,0.03285452
-numeric__opponent_allowed_shots,0.027929483
-numeric__player_tendency_shot_profile_rate,0.026785355
-numeric__seconds_remaining_in_quarter,0.02485464
-binary__is_layup,0.024442624
-numeric__player_profile_residual,0.023522595
-numeric__player_prior_2pt_shots,0.02210875
-numeric__team_prior_zone_fg_pct,0.021779394
-numeric__player_action_residual,0.020434387
-numeric__team_prior_2pt_shots,0.020081414
-numeric__opponent_allowed_2pt_shots,0.019719288
-numeric__player_prior_action_shots,0.01726085
-numeric__team_prior_fg_pct,0.01717108
-numeric__QUARTER,0.016527819
-numeric__opponent_allowed_3pt_pct,0.015949467
-numeric__player_prior_3pt_pct,0.014841263
-numeric__team_prior_zone_shots,0.013701255
-numeric__wingspan_inches,0.0127025815
-numeric__opponent_allowed_zone_fg_pct,0.012302388
-numeric__height_inches,0.011512079
-numeric__team_prior_2pt_pct,0.011199453
-numeric__LOC_X,0.01096923
-numeric__opponent_allowed_zone_shots,0.010231892
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | dunk,0.010101781
-numeric__player_tendency_action_rate,0.009985721
-numeric__team_prior_3pt_pct,0.009905822
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | layup,0.009711322
-numeric__opponent_allowed_fg_pct,0.00945283
-numeric__player_zone_residual,0.009268932
-numeric__wingspan_minus_height_in,0.009262125
-numeric__player_prior_zone_shots,0.009235645
-numeric__shot_angle_deg,0.009110351
-numeric__player_tendency_zone_rate,0.008756374
-categorical__action_category_dunk,0.008572033
-numeric__opponent_allowed_2pt_pct,0.00852676
-numeric__player_prior_shots,0.008433401
-numeric__proxy_defender_dist_ft,0.008160873
-numeric__player_prior_2pt_pct,0.007955811
-categorical__action_category_running_jump,0.007885842
-numeric__proxy_shot_clock_sec,0.0074835517
-numeric__opponent_allowed_3pt_shots,0.0069106575
-numeric__player_prior_fg_pct,0.005560303
-numeric__proxy_dribbles,0.0041616284
-binary__is_late_clock,0.0037882512
-numeric__player_prior_3pt_shots,0.0033893276
-categorical__action_category_layup,0.003081584
-numeric__team_prior_3pt_shots,0.0029496835
-categorical__shot_profile_Above the Break 3 | 24+ ft. | pullup,0.0029244935
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | pullup,0.002661877
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | layup,0.002584068
-categorical__action_category_other,0.0023330573
-categorical__action_category_stepback,0.0019915118
-categorical__action_category_floater,0.0018281668
-categorical__action_category_fadeaway,0.0017149472
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | hook,0.001585887
-categorical__shot_profile_Mid-Range | 8-16 ft. | pullup,0.0015655516
-categorical__action_category_pullup,0.0013764236
-categorical__BASIC_ZONE_Mid-Range,0.0013433355
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | layup,0.0013203273
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | hook,0.0012284294
-categorical__shot_profile_Above the Break 3 | 24+ ft. | running_jump,0.0011794054
-numeric__proxy_touch_time_sec,0.0011236026
-categorical__shot_profile_Mid-Range | 16-24 ft. | fadeaway,0.001007034
-categorical__shot_profile_Mid-Range | 8-16 ft. | stepback,0.00069049123
-categorical__action_category_hook,0.0006861331
-categorical__shot_profile_Above the Break 3 | 24+ ft. | jump_shot,0.00067499495
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | stepback,0.00053779595
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | floater,0.0004795913
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | fadeaway,0.00039294924
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | pullup,0.00039081415
-categorical__zone_range_Right Side | 8-16 ft.,0.00038478206
-categorical__action_category_turnaround,0.0003597724
-categorical__BASIC_ZONE_In The Paint (Non-RA),0.00035618737
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | stepback,0.00027204008
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | hook,0.00026082035
-categorical__zone_range_Center | 8-16 ft.,0.0002607017
-categorical__shot_profile_Mid-Range | 8-16 ft. | fadeaway,0.0002492826
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | floater,0.00024793716
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | other,0.00024362301
-categorical__shot_profile_Right Corner 3 | 24+ ft. | pullup,0.00024038464
-categorical__shot_profile_Mid-Range | 16-24 ft. | pullup,0.00023233838
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | jump_shot,0.00021748379
-categorical__shot_profile_Right Corner 3 | 24+ ft. | running_jump,0.00021725481
-categorical__action_category_jump_shot,0.00021205569
-categorical__shot_profile_Mid-Range | 16-24 ft. | stepback,0.00020863918
-categorical__zone_range_Left Side | 8-16 ft.,0.0001978551
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | jump_shot,0.00019570584
-categorical__shot_profile_Mid-Range | 8-16 ft. | layup,0.00019489886
-categorical__shot_profile_Left Corner 3 | 24+ ft. | pullup,0.00018438896
-categorical__zone_range_Right Side Center | 16-24 ft.,0.00017207881
-categorical__shot_profile_Mid-Range | 16-24 ft. | jump_shot,0.00016461666
-categorical__shot_profile_Above the Break 3 | 24+ ft. | fadeaway,0.00015045423
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | floater,0.00014616741
-binary__is_overtime,0.00014264291
-categorical__shot_profile_Mid-Range | 8-16 ft. | turnaround,0.00014258354
-categorical__shot_profile_Above the Break 3 | 24+ ft. | turnaround,0.00012520934
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | fadeaway,0.00012303134
-categorical__zone_range_Center | 16-24 ft.,0.00012248658
-categorical__shot_profile_Above the Break 3 | 24+ ft. | stepback,0.000117679214
-categorical__shot_profile_Right Corner 3 | 24+ ft. | stepback,0.00010881853
-categorical__shot_profile_Left Corner 3 | 24+ ft. | stepback,0.00010759475
-categorical__zone_range_Left Side Center | 24+ ft.,9.124564e-05
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | dunk,8.184464e-05
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | turnaround,8.054095e-05
-categorical__zone_range_Left Side Center | 16-24 ft.,6.735376e-05
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | jump_shot,6.595405e-05
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | fadeaway,6.177843e-05
-categorical__shot_profile_Mid-Range | 8-16 ft. | jump_shot,5.4278975e-05
-categorical__zone_range_Right Side Center | 24+ ft.,5.1631458e-05
-categorical__shot_profile_Mid-Range | 8-16 ft. | hook,4.7746176e-05
-categorical__zone_range_Right Side | 16-24 ft.,4.5987035e-05
-categorical__zone_range_Left Side | 16-24 ft.,4.5559653e-05
-categorical__zone_range_Center | 24+ ft.,4.3184464e-05
-categorical__shot_profile_Left Corner 3 | 24+ ft. | jump_shot,3.7070928e-05
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | turnaround,3.4779932e-05
-categorical__shot_profile_Mid-Range | 16-24 ft. | floater,2.3960007e-05
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | turnaround,2.3007704e-05
-categorical__shot_profile_Mid-Range | 16-24 ft. | turnaround,1.9532816e-05
-categorical__shot_profile_Above the Break 3 | 24+ ft. | floater,1.8428158e-05
-categorical__shot_profile_Left Corner 3 | 24+ ft. | running_jump,1.815627e-05
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | other,1.2709369e-05
-categorical__shot_profile_Above the Break 3 | 24+ ft. | other,1.22138545e-05
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | other,9.881091e-06
-categorical__shot_profile_Mid-Range | 8-16 ft. | other,9.624036e-06
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | running_jump,8.681398e-06
-categorical__shot_profile_Mid-Range | 16-24 ft. | running_jump,4.9516766e-06
-categorical__shot_profile_Mid-Range | 8-16 ft. | dunk,0.0
-categorical__BASIC_ZONE_Left Corner 3,0.0
+numeric__SHOT_DISTANCE,0.25356254
+numeric__player_prior_zone_fg_pct,0.13524482
+binary__is_dunk,0.05997311
+numeric__player_prior_action_fg_pct,0.05946356
+numeric__LOC_Y,0.051931053
+numeric__abs_angle_deg,0.050844826
+numeric__seconds_remaining_in_quarter,0.027204273
+binary__is_layup,0.026624326
+numeric__team_prior_zone_fg_pct,0.026019052
+numeric__team_prior_shots,0.02538978
+numeric__player_tendency_shot_profile_rate,0.023862902
+numeric__player_prior_2pt_shots,0.023630193
+numeric__opponent_allowed_shots,0.022156747
+numeric__player_profile_residual,0.020746747
+numeric__player_action_residual,0.02027144
+numeric__team_prior_2pt_shots,0.018243128
+numeric__team_prior_fg_pct,0.01719423
+numeric__proxy_defender_dist_ft,0.017118584
+numeric__QUARTER,0.01608928
+numeric__player_prior_3pt_pct,0.015777051
+numeric__player_prior_action_shots,0.01561364
+numeric__opponent_allowed_3pt_pct,0.01520779
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | dunk,0.015205962
+numeric__opponent_allowed_2pt_shots,0.014960275
+numeric__team_prior_zone_shots,0.012409828
+numeric__LOC_X,0.012057928
+numeric__wingspan_inches,0.011933702
+numeric__opponent_allowed_zone_fg_pct,0.011309801
+numeric__team_prior_2pt_pct,0.0112825325
+numeric__height_inches,0.0108585805
+numeric__player_tendency_action_rate,0.010633412
+numeric__opponent_allowed_zone_shots,0.010481552
+numeric__player_prior_fg_pct_16_24,0.010203525
+numeric__player_prior_zone_shots,0.009969152
+numeric__player_zone_residual,0.009938696
+numeric__player_prior_fg_pct_24_28,0.009492348
+numeric__wingspan_minus_height_in,0.009410797
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | layup,0.00932134
+numeric__opponent_allowed_fg_pct,0.008749429
+numeric__shot_angle_deg,0.008603809
+numeric__opponent_allowed_2pt_pct,0.008518828
+categorical__action_category_dunk,0.008169993
+numeric__player_prior_shots_0_10,0.007894629
+numeric__opponent_allowed_3pt_shots,0.007597835
+numeric__player_prior_shots,0.007422674
+categorical__action_category_running_jump,0.0073259203
+numeric__team_prior_3pt_pct,0.0073090834
+numeric__proxy_shot_clock_sec,0.0072135194
+numeric__player_prior_2pt_pct,0.006114818
+numeric__player_prior_fg_pct_0_10,0.0059619523
+numeric__player_tendency_zone_rate,0.0058635646
+numeric__player_prior_fg_pct_10_16,0.0048712185
+numeric__player_prior_shots_10_16,0.0032105255
+numeric__player_prior_fg_pct,0.0031552499
+numeric__proxy_dribbles,0.0030062757
+numeric__team_prior_3pt_shots,0.0027630783
+categorical__shot_profile_Above the Break 3 | 24+ ft. | pullup,0.0026887169
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | pullup,0.0026612296
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | layup,0.0026557313
+categorical__action_category_layup,0.0026410643
+numeric__player_prior_shots_24_28,0.0026304252
+categorical__action_category_other,0.002514148
+numeric__player_prior_3pt_shots,0.002387553
+numeric__player_prior_fg_pct_28_35,0.0023561087
+numeric__player_prior_shots_16_24,0.002249499
+binary__is_late_clock,0.0021668854
+numeric__player_prior_fg_pct_35_plus,0.002158318
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | hook,0.0019056551
+categorical__BASIC_ZONE_In The Paint (Non-RA),0.0018359246
+categorical__action_category_fadeaway,0.0017231888
+categorical__action_category_stepback,0.00170161
+categorical__shot_profile_Mid-Range | 8-16 ft. | pullup,0.0014876457
+categorical__action_category_jump_shot,0.0013529435
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | hook,0.0011917608
+categorical__shot_profile_Above the Break 3 | 24+ ft. | running_jump,0.0009989413
+numeric__proxy_touch_time_sec,0.00097362645
+categorical__shot_profile_Above the Break 3 | 24+ ft. | jump_shot,0.0009402276
+categorical__BASIC_ZONE_Mid-Range,0.00093925
+categorical__action_category_pullup,0.0008135514
+categorical__shot_profile_Mid-Range | 16-24 ft. | fadeaway,0.00074854004
+categorical__zone_range_Center | 8-16 ft.,0.0006217412
+categorical__shot_profile_Mid-Range | 8-16 ft. | stepback,0.0006060818
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | stepback,0.0005974313
+categorical__zone_range_Left Side Center | 16-24 ft.,0.00044775056
+numeric__player_prior_shots_28_35,0.00040309338
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | floater,0.00037910207
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | pullup,0.00037810038
+categorical__shot_profile_Mid-Range | 8-16 ft. | turnaround,0.0003629729
+binary__distance_10_16_ft,0.00035601936
+categorical__action_category_hook,0.00034166404
+categorical__zone_range_Right Side | 8-16 ft.,0.0003293769
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | stepback,0.000292982
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | fadeaway,0.00026756086
+categorical__shot_profile_Mid-Range | 16-24 ft. | stepback,0.00023378854
+categorical__shot_profile_Mid-Range | 8-16 ft. | layup,0.00022957266
+categorical__BASIC_ZONE_Left Corner 3,0.00021831243
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | other,0.00021829939
+binary__is_overtime,0.00021320862
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | dunk,0.00020307832
+categorical__shot_profile_Left Corner 3 | 24+ ft. | pullup,0.00019255119
+categorical__action_category_turnaround,0.0001851136
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | jump_shot,0.00018339814
+categorical__shot_profile_Right Corner 3 | 24+ ft. | running_jump,0.0001831667
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | jump_shot,0.00017575825
+categorical__shot_profile_Right Corner 3 | 24+ ft. | pullup,0.00017307546
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | fadeaway,0.00016868602
+categorical__shot_profile_Above the Break 3 | 24+ ft. | stepback,0.00016548873
+categorical__shot_profile_Above the Break 3 | 24+ ft. | turnaround,0.00014899357
+categorical__shot_profile_Mid-Range | 8-16 ft. | fadeaway,0.00014740291
+categorical__shot_profile_Right Corner 3 | 24+ ft. | stepback,0.00014093737
+categorical__shot_profile_Mid-Range | 8-16 ft. | floater,0.00013876654
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | hook,0.00013160415
+categorical__zone_range_Right Side Center | 24+ ft.,0.00012943929
+categorical__zone_range_Left Side | 16-24 ft.,0.0001241942
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | jump_shot,0.00010132717
+categorical__shot_profile_Above the Break 3 | 24+ ft. | fadeaway,0.000101133475
+categorical__shot_profile_Mid-Range | 16-24 ft. | floater,0.00010011202
+categorical__shot_profile_Mid-Range | 16-24 ft. | pullup,9.8389915e-05
+categorical__action_category_floater,9.210511e-05
+categorical__zone_range_Right Side Center | 16-24 ft.,8.5804524e-05
+categorical__zone_range_Center | Less Than 8 ft.,8.429115e-05
+categorical__shot_profile_Mid-Range | 16-24 ft. | jump_shot,8.207837e-05
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | turnaround,7.9759906e-05
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | floater,7.885429e-05
+categorical__zone_range_Left Side | 8-16 ft.,6.954099e-05
+categorical__shot_profile_Left Corner 3 | 24+ ft. | jump_shot,6.883083e-05
+categorical__zone_range_Left Side Center | 24+ ft.,6.6354805e-05
+categorical__zone_range_Center | 16-24 ft.,6.0637147e-05
+categorical__zone_range_Right Side | 16-24 ft.,4.4851826e-05
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | turnaround,4.3669042e-05
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | turnaround,4.3366705e-05
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | fadeaway,4.26586e-05
+categorical__shot_profile_Above the Break 3 | 24+ ft. | floater,4.0962263e-05
+categorical__shot_profile_Mid-Range | 8-16 ft. | hook,3.072514e-05
+categorical__shot_profile_Left Corner 3 | 24+ ft. | running_jump,2.7417935e-05
+categorical__BASIC_ZONE_Right Corner 3,2.6659578e-05
+categorical__shot_profile_Left Corner 3 | 24+ ft. | stepback,2.2675526e-05
+categorical__shot_profile_Mid-Range | 16-24 ft. | turnaround,2.2497363e-05
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | other,1.4496827e-05
+categorical__shot_profile_Mid-Range | 8-16 ft. | jump_shot,1.1993364e-05
+categorical__shot_profile_Right Corner 3 | 24+ ft. | fadeaway,1.0708317e-05
+categorical__shot_profile_Above the Break 3 | 24+ ft. | other,9.511484e-06
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | running_jump,7.776325e-06
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | pullup,6.108281e-06
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | floater,5.072261e-06
+categorical__zone_range_Center | 24+ ft.,4.5464417e-06
+numeric__player_prior_shots_35_plus,4.4314934e-06
+categorical__shot_profile_Mid-Range | 8-16 ft. | running_jump,3.886648e-06
+categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | running_jump,3.3847284e-06
 categorical__shot_profile_Right Corner 3 | 24+ ft. | turnaround,0.0
-categorical__zone_range_Back Court | Back Court Shot,0.0
-categorical__shot_profile_Mid-Range | 16-24 ft. | dunk,0.0
-categorical__shot_profile_Left Corner 3 | 24+ ft. | turnaround,0.0
-categorical__shot_profile_Above the Break 3 | Back Court Shot | pullup,0.0
-categorical__zone_range_Center | Less Than 8 ft.,0.0
-categorical__shot_profile_Left Corner 3 | 24+ ft. | other,0.0
-categorical__BASIC_ZONE_Above the Break 3,0.0
-categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | dunk,0.0
-categorical__zone_range_Left Side | 24+ ft.,0.0
-categorical__shot_profile_Above the Break 3 | Back Court Shot | other,0.0
-categorical__shot_profile_Above the Break 3 | Back Court Shot | jump_shot,0.0
-categorical__shot_profile_Left Corner 3 | 24+ ft. | floater,0.0
-categorical__shot_profile_Left Corner 3 | 24+ ft. | fadeaway,0.0
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | stepback,0.0
 categorical__zone_range_Right Side | 24+ ft.,0.0
-categorical__shot_profile_Above the Break 3 | Back Court Shot | running_jump,0.0
-categorical__shot_profile_Right Corner 3 | 24+ ft. | fadeaway,0.0
-categorical__shot_profile_Right Corner 3 | 24+ ft. | other,0.0
+categorical__zone_range_Left Side | 24+ ft.,0.0
+binary__distance_35_plus_ft,0.0
+categorical__shot_profile_Right Corner 3 | 24+ ft. | floater,0.0
+categorical__zone_range_Back Court | Back Court Shot,0.0
 categorical__shot_profile_Right Corner 3 | 24+ ft. | jump_shot,0.0
-categorical__shot_profile_Mid-Range | 8-16 ft. | floater,0.0
+categorical__shot_profile_Right Corner 3 | 24+ ft. | other,0.0
+binary__distance_28_35_ft,0.0
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | running_jump,0.0
+categorical__shot_profile_Mid-Range | 16-24 ft. | running_jump,0.0
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | other,0.0
+categorical__shot_profile_Restricted Area | Less Than 8 ft. | layup,0.0
+binary__distance_0_10_ft,0.0
 categorical__shot_profile_Above the Break 3 | Back Court Shot | floater,0.0
-categorical__shot_profile_Mid-Range | 8-16 ft. | running_jump,0.0
-categorical__shot_profile_Mid-Range | 16-24 ft. | other,0.0
+categorical__shot_profile_Above the Break 3 | Back Court Shot | jump_shot,0.0
+categorical__shot_profile_Above the Break 3 | Back Court Shot | other,0.0
+categorical__shot_profile_Above the Break 3 | Back Court Shot | pullup,0.0
+categorical__shot_profile_Above the Break 3 | Back Court Shot | running_jump,0.0
+categorical__shot_profile_In The Paint (Non-RA) | 8-16 ft. | dunk,0.0
 binary__is_corner_3,0.0
-categorical__shot_profile_Mid-Range | 16-24 ft. | layup,0.0
 binary__is_three,0.0
 categorical__BASIC_ZONE_Restricted Area,0.0
-numeric__is_home,0.0
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | pullup,0.0
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | running_jump,0.0
-categorical__shot_profile_Restricted Area | Less Than 8 ft. | stepback,0.0
+categorical__shot_profile_Left Corner 3 | 24+ ft. | fadeaway,0.0
+categorical__shot_profile_Left Corner 3 | 24+ ft. | floater,0.0
+categorical__shot_profile_Left Corner 3 | 24+ ft. | other,0.0
+categorical__shot_profile_Left Corner 3 | 24+ ft. | turnaround,0.0
 categorical__shot_profile_Mid-Range | 16-24 ft. | hook,0.0
-categorical__BASIC_ZONE_Right Corner 3,0.0
-categorical__shot_profile_Right Corner 3 | 24+ ft. | floater,0.0
-categorical__shot_profile_In The Paint (Non-RA) | Less Than 8 ft. | running_jump,0.0
+categorical__shot_profile_Mid-Range | 16-24 ft. | layup,0.0
+categorical__shot_profile_Mid-Range | 16-24 ft. | other,0.0
+categorical__shot_profile_Mid-Range | 8-16 ft. | dunk,0.0
+categorical__shot_profile_Mid-Range | 8-16 ft. | other,0.0
+binary__distance_16_24_ft,0.0
+categorical__BASIC_ZONE_Above the Break 3,0.0
+numeric__is_home,0.0
+binary__distance_24_28_ft,0.0
+categorical__shot_profile_Mid-Range | 16-24 ft. | dunk,0.0
