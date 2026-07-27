@@ -16,6 +16,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score,
@@ -71,6 +72,13 @@ NUMERIC_FEATURES = [
     "player_zone_residual",
     "player_action_residual",
     "player_profile_residual",
+    "proxy_defender_dist_ft",
+    "proxy_shot_clock_sec",
+    "proxy_dribbles",
+    "proxy_touch_time_sec",
+    "height_inches",
+    "wingspan_inches",
+    "wingspan_minus_height_in",
 ]
 
 BINARY_FEATURES = [
@@ -112,10 +120,20 @@ def load_data(features_path: Path):
 
 
 def build_preprocessor() -> ColumnTransformer:
-    """Build a sklearn ColumnTransformer for the feature pipeline."""
+    """Build a sklearn ColumnTransformer for the feature pipeline.
+
+    height_inches/wingspan_inches/wingspan_minus_height_in have real NaNs
+    (players missing from the 2024-25 bio snapshot) -- median-impute them
+    before scaling, since StandardScaler/LogisticRegression can't handle
+    NaN natively (unlike the XGBoost path).
+    """
+    numeric_pipeline = Pipeline([
+        ("imputer", SimpleImputer(strategy="median")),
+        ("scaler", StandardScaler()),
+    ])
     return ColumnTransformer(
         transformers=[
-            ("numeric", StandardScaler(), NUMERIC_FEATURES),
+            ("numeric", numeric_pipeline, NUMERIC_FEATURES),
             ("binary", "passthrough", BINARY_FEATURES),
             (
                 "categorical",
